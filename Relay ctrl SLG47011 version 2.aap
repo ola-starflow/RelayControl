@@ -1,0 +1,1686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GPDProject version="41" oldestCompatibleVersion="32" GPDVersion="6.54.002" lastChange="12 Jun 2026 21:41:09" projectChecksumState="1" projectChecksum="25c82ad8">
+    <Metadata>
+        <LegalNotice>This Design was generated using Renesas' proprietary Go Configure Software Hub and is provided for use solely in connection with Renesas GreenPAK integrated circuits. Any unauthorized use, reproduction, distribution, or manufacture of this Design is prohibited. This Design is provided 'AS IS' without warranties of any kind.</LegalNotice>
+    </Metadata>
+    <generalProjectSettings/>
+    <chip family="04" type="06" friendlyName="GreenPAK 6" partNumber="68" package="29">
+        <nvmData registerLenght="70320">A0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 E0 CF F 40 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 A 1 0 0 0 0 0 A 1 0 0 0 40 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 8 81 1F 0 0 0 0 0 0 F 6F 0 E3 F3 2E 2E 85 C5 A5 0 0 0 0 0 0 0 0 0 0 0 18 0 A0 7B 3C 78 1 0 0 D4 E0 5 0 0 57 8D 97 E4 C5 0 0 0 40 C 0 0 50 26 90 7 0 0 0 30 1B 0 2B A0 B 0 0 BA D 42 3 0 0 34 0 0 0 0 3 0 0 0 0 EF 4 0 0 0 BC F 2F 0 0 0 0 32 98 C7 24 4 58 2 0 0 0 0 0 1 0 0 0 0 35 0 53 0 0 0 0 0 0 0 18 0 0 0 0 0 0 42 1 2 2 10 0 0 2 1 F1 A0 10 0 0 12 3 34 E8 10 0 0 0 1 0 1 10 0 0 12 3 34 E8 10 0 FC 0 2 0 1 10 0 0 52 3 34 E8 10 0 BF 25 2 4 7 D0 1 0 0 0 1 0 0 1 1 0 0 0 42 21 2 0 3 1 0 0 F2 22 0 3 4 7 D0 1 0 0 1 40 0 0 0 0 7 D0 33 0 F 0 FD 0 9 0 AA 9D A 0 0 0 0 91 F FF FF 0 30 20 19 11 2 5 15 0 0 8 1A 0 0 0 0 0 0 0 0 0 0 0 10 32 44 44 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 8 68 0 0 F FF 0 0 0 0 0 0 0 2 AC 3 3F 1 9 1 1 1 1 0 C4 40 43 0 3 0 0 1 E 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 80 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</nvmData>
+        <checksum crc32="0xAABDE63B" version="5"/>
+        <virtualProperties/>
+        <VDDItem id="0">
+            <item id="0" caption="VDD (PIN 1)">
+                <graphics pos="(-2076.48,247.22)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+            </item>
+        </VDDItem>
+        <item id="1" caption="GND (PIN 2)">
+            <graphics pos="(-2082.88,169.81)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+        </item>
+        <IOPad id="2" useCaseMode="1">
+            <item id="2" caption="PIN 3 (GPI)">
+                <graphics pos="(-769.46,438.55)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-5.73,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Enable H</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="3" useCaseMode="1">
+            <item id="3" caption="PIN 4 (GPIO0)">
+                <graphics pos="(-1688.56,629.09)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+            </item>
+        </IOPad>
+        <IOPad id="4" useCaseMode="1">
+            <item id="4" caption="PIN 5 (GPIO1)">
+                <graphics pos="(-1701.36,688.28)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+            </item>
+        </IOPad>
+        <IOPad id="5" useCaseMode="1">
+            <item id="5" caption="PIN 6 (GPIO2)">
+                <graphics pos="(-1623.98,801.02)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-1.46,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">I2C adr</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="6" useCaseMode="4">
+            <item id="6" caption="PIN 7 (GPIO3)">
+                <graphics pos="(-876.90,75.11)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-14.89,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Shutdown_N</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="7" useCaseMode="1">
+            <item id="7" caption="PIN 8 (GPIO4)">
+                <graphics pos="(-847.77,289.46)" angle="0" flipping="0" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-4.21,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Reset_N</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="8" useCaseMode="3">
+            <item id="8" caption="PIN 9 (GPIO5)">
+                <graphics pos="(-1994.32,108.00)" angle="180" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(66.80,48.00)" angle="-180.00" textColor="#ffff00ff" backgroundColor="#14141464">Relay pwr voltage</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="9" useCaseMode="2">
+            <item id="9" caption="PIN 10 (GPIO6)">
+                <graphics pos="(137.71,817.85)" angle="0" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-1.48,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Relay L</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="10" useCaseMode="3">
+            <item id="10" caption="PIN 11 (GPIO7)">
+                <graphics pos="(-2023.76,-85.91)" angle="180" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(42.19,48.00)" angle="-180.00" textColor="#ffff00ff" backgroundColor="#14141464">shunt +</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="11" useCaseMode="1">
+            <item id="11" caption="PIN 12 (GPIO8)">
+                <graphics pos="(-764.36,874.69)" angle="180" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(44.77,48.00)" angle="-180.00" textColor="#ffff00ff" backgroundColor="#14141464">Enable L</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="12" useCaseMode="2">
+            <item id="12" caption="PIN 13 (GPIO9)">
+                <graphics pos="(143.43,492.29)" angle="0" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-2.44,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Relay H</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="13" useCaseMode="3">
+            <item id="13" caption="PIN 14 (GPIO10)">
+                <graphics pos="(-2025.29,21.89)" angle="180" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(46.12,48.00)" angle="-180.00" textColor="#ffff00ff" backgroundColor="#14141464">Shunt ref</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="14" useCaseMode="2">
+            <item id="14" caption="PIN 15 (GPIO11)">
+                <graphics pos="(132.13,654.53)" angle="0" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-14.78,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Boost power</textLabel>
+            </item>
+        </IOPad>
+        <IOPad id="15" useCaseMode="2">
+            <item id="15" caption="PIN 16 (GPIO12)">
+                <graphics pos="(-1188.79,818.00)" angle="0" flipping="1" hidden="0" tOrigin="(20.00,10.00)"/>
+                <textLabel pos="(-1.45,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">PWM L</textLabel>
+            </item>
+        </IOPad>
+        <LUT id="16" regularShape="0" mode="0">
+            <item id="16" caption="2-bit LUT0/DFF/LATCH0">
+                <graphics pos="(-346.95,2.17)" angle="90" flipping="0" hidden="0" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="17" regularShape="0" mode="0">
+            <item id="17" caption="2-bit LUT1/DFF/LATCH1">
+                <graphics pos="(-1182.42,352.20)" angle="270" flipping="0" hidden="0" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="18" regularShape="0" mode="0">
+            <item id="18" caption="3-bit LUT0/DFF/LATCH2">
+                <graphics pos="(-721.08,357.08)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="19" regularShape="0" mode="0">
+            <item id="19" caption="3-bit LUT1/DFF/LATCH3">
+                <graphics pos="(-388.36,49.14)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="20" regularShape="0" mode="0">
+            <item id="20" caption="3-bit LUT2/DFF/LATCH4">
+                <graphics pos="(-388.36,101.73)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="21" regularShape="0" mode="0">
+            <item id="21" caption="3-bit LUT3/DFF/LATCH5">
+                <graphics pos="(-297.98,-57.04)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="22" regularShape="0" mode="0">
+            <item id="22" caption="3-bit LUT4/DFF/LATCH6">
+                <graphics pos="(-824.49,593.69)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="23" regularShape="0" mode="0">
+            <item id="23" caption="3-bit LUT5/DFF/LATCH7">
+                <graphics pos="(-577.59,853.18)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="24" caption="3-bit LUT6/DFF/LATCH8">
+            <graphics pos="(-1245.42,286.90)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,10.00)"/>
+        </item>
+        <item id="25" caption="3-bit LUT7/DFF/LATCH9">
+            <graphics pos="(-387.62,-145.72)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,10.00)"/>
+            <textLabel pos="(-27.70,-25.83)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Current direction</textLabel>
+        </item>
+        <LUT id="26" regularShape="0" mode="0">
+            <item id="26" caption="3-bit LUT8/DFF/LATCH10/Shift Register 0">
+                <graphics pos="(-297.98,-3.89)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="27" regularShape="0" mode="0">
+            <item id="27" caption="3-bit LUT9/DFF/LATCH11/Shift Register 1">
+                <graphics pos="(-297.98,49.14)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="28" regularShape="0" mode="0">
+            <item id="28" caption="3-bit LUT10/DFF/LATCH12/Shift Register 2">
+                <graphics pos="(39.19,61.54)" angle="90" flipping="0" hidden="0" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="29" regularShape="0" mode="0">
+            <item id="29" caption="3-bit LUT11/DFF/LATCH13/Shift Register 3">
+                <graphics pos="(35.98,118.32)" angle="90" flipping="0" hidden="0" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="30" regularShape="0" mode="0">
+            <item id="30" caption="3-bit LUT12/DFF/LATCH14/Shift Register 4">
+                <graphics pos="(-297.98,270.30)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="31" regularShape="0" mode="0">
+            <item id="31" caption="3-bit LUT13/DFF/LATCH15/Shift Register 5">
+                <graphics pos="(-297.98,322.89)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="32" regularShape="0" mode="0">
+            <item id="32" caption="4-bit LUT0/DFF/LATCH16">
+                <graphics pos="(-297.98,101.73)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <LUT id="33" regularShape="0" mode="0">
+            <item id="33" caption="4-bit LUT1/DFF/LATCH17">
+                <graphics pos="(-297.98,375.89)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="34" caption="MF0 (3-bit LUT14, DFF/LATCH18, 12-bit CNT0/DLY0)">
+            <graphics pos="(-1349.98,-8.53)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="35" regularShape="0" mode="0">
+            <item id="35" caption="3-bit LUT14 (MF0)">
+                <graphics pos="(-1214.98,36.47)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="36" caption="DFF/LATCH18 (MF0)">
+            <graphics pos="(-1219.98,41.47)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="37" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="37" caption="12-bit CNT0/DLY0 (MF0)">
+                <graphics pos="(-1347.20,439.28)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="38" caption="MF1 (3-bit LUT15, DFF/LATCH19, 12-bit CNT1/DLY1)">
+            <graphics pos="(-459.05,406.88)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="39" regularShape="0" mode="0">
+            <item id="39" caption="3-bit LUT15 (MF1)">
+                <graphics pos="(-198.90,49.14)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="40" caption="DFF/LATCH19 (MF1)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="41" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="41" caption="12-bit CNT1/DLY1 (MF1)">
+                <graphics pos="(-407.55,450.38)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="42" caption="MF2 (3-bit LUT16, DFF/LATCH20, 12-bit CNT2/DLY2)">
+            <graphics pos="(-1081.51,685.19)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="43" regularShape="0" mode="0">
+            <item id="43" caption="3-bit LUT16 (MF2)">
+                <graphics pos="(-858.01,743.69)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="44" caption="DFF/LATCH20 (MF2)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="45" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="45" caption="12-bit CNT2/DLY2 (MF2)">
+                <graphics pos="(-238.47,98.46)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="46" caption="MF3 (3-bit LUT17, DFF/LATCH21, 12-bit CNT3/DLY3)">
+            <graphics pos="(-1041.01,582.48)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="47" regularShape="0" mode="0">
+            <item id="47" caption="3-bit LUT17 (MF3)">
+                <graphics pos="(-906.01,627.48)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="48" caption="DFF/LATCH21 (MF3)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="49" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="49" caption="12-bit CNT3/DLY3 (MF3)">
+                <graphics pos="(-1813.77,399.19)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="50" caption="MF4 (3-bit LUT18, DFF/LATCH22, 12-bit CNT4/DLY4)">
+            <graphics pos="(-334.62,349.46)" angle="0" flipping="0" hidden="0" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="51" regularShape="0" mode="0">
+            <item id="51" caption="3-bit LUT18 (MF4)">
+                <graphics pos="(-111.12,458.43)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="52" caption="DFF/LATCH22 (MF4)">
+            <graphics pos="(-293.12,408.96)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="53" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="53" caption="12-bit CNT4/DLY4 (MF4)">
+                <graphics pos="(-128.12,395.96)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="54" caption="MF5 (3-bit LUT19, DFF/LATCH23, 12-bit CNT5/DLY5)">
+            <graphics pos="(-287.41,547.66)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="55" regularShape="0" mode="0">
+            <item id="55" caption="3-bit LUT19 (MF5)">
+                <graphics pos="(-63.91,606.16)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="56" caption="DFF/LATCH23 (MF5)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="57" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="57" caption="12-bit CNT5/DLY5 (MF5)">
+                <graphics pos="(-260.70,554.68)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="58" caption="MF6 (3-bit LUT20, DFF/LATCH24, 12-bit CNT6/DLY6)">
+            <graphics pos="(-393.78,788.57)" angle="0" flipping="0" hidden="0" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="59" regularShape="0" mode="0">
+            <item id="59" caption="3-bit LUT20 (MF6)">
+                <graphics pos="(-354.08,848.80)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="60" caption="DFF/LATCH24 (MF6)">
+            <graphics pos="(-352.28,848.07)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="61" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="61" caption="12-bit CNT6/DLY6 (MF6)">
+                <graphics pos="(-187.28,835.07)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="62" caption="MF7 (3-bit LUT21, DFF/LATCH25, 12-bit CNT7/DLY7)">
+            <graphics pos="(-307.35,614.13)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="63" regularShape="0" mode="0">
+            <item id="63" caption="3-bit LUT21 (MF7)">
+                <graphics pos="(-83.85,672.63)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="64" caption="DFF/LATCH25 (MF7)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="65" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="65" caption="12-bit CNT7/DLY7 (MF7)">
+                <graphics pos="(-255.85,657.63)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="66" caption="MF8 (3-bit LUT22, DFF/LATCH26, 12-bit CNT8/DLY8)">
+            <graphics pos="(-152.78,-101.62)" angle="0" flipping="0" hidden="0" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="67" regularShape="0" mode="0">
+            <item id="67" caption="3-bit LUT22 (MF8)">
+                <graphics pos="(-215.92,-87.71)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="68" caption="DFF/LATCH26 (MF8)">
+            <graphics pos="(-111.28,-42.12)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,10.00)"/>
+            <textLabel pos="(-22.87,-28.00)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Shutdown latched</textLabel>
+        </item>
+        <CNTDLY id="69" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="69" caption="12-bit CNT8/DLY8 (MF8)">
+                <graphics pos="(53.72,-55.12)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="70" caption="MF9 (3-bit LUT23, DFF/LATCH27, 12-bit CNT9/DLY9)">
+            <graphics pos="(-811.92,139.42)" angle="0" flipping="0" hidden="0" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="71" regularShape="0" mode="0">
+            <item id="71" caption="3-bit LUT23 (MF9)">
+                <graphics pos="(-588.42,197.92)" angle="90" flipping="0" hidden="0" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="72" caption="DFF/LATCH27 (MF9)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="73" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="73" caption="12-bit CNT9/DLY9 (MF9)">
+                <graphics pos="(-760.42,176.42)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,22.50)"/>
+            </item>
+        </CNTDLY>
+        <item id="74" caption="MF10 (3-bit LUT24, DFF/LATCH28, 12-bit CNT10/DLY10/FSM2)">
+            <graphics pos="(-136.16,119.12)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="75" regularShape="0" mode="0">
+            <item id="75" caption="3-bit LUT24 (MF10)">
+                <graphics pos="(-1.16,164.12)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="76" caption="DFF/LATCH28 (MF10)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="77" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="77" caption="12-bit CNT10/DLY10/FSM2 (MF10)">
+                <graphics pos="(-80.67,552.65)" angle="0" flipping="0" hidden="1" tOrigin="(40.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="78" caption="MF11 (4-bit LUT2, DFF/LATCH29, 16-bit CNT11/DLY11/FSM0)">
+            <graphics pos="(-1603.96,452.58)" angle="0" flipping="0" hidden="1" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="79" regularShape="0" mode="0">
+            <item id="79" caption="4-bit LUT2 (MF11)">
+                <graphics pos="(-1552.46,510.08)" angle="90" flipping="0" hidden="1" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="80" caption="DFF/LATCH29 (MF11)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="81" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="81" caption="16-bit CNT11/DLY11/FSM0 (MF11)">
+                <graphics pos="(-1251.46,431.60)" angle="0" flipping="0" hidden="0" tOrigin="(40.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="82" caption="MF12 (4-bit LUT3, DFF/LATCH30, 16-bit CNT12/DLY12/FSM1)">
+            <graphics pos="(-214.37,574.93)" angle="0" flipping="0" hidden="0" tOrigin="(155.00,60.00)"/>
+        </item>
+        <LUT id="83" regularShape="0" mode="0">
+            <item id="83" caption="4-bit LUT3 (MF12)">
+                <graphics pos="(-162.87,632.43)" angle="90" flipping="0" hidden="0" tOrigin="(20.00,15.00)"/>
+            </item>
+        </LUT>
+        <item id="84" caption="DFF/LATCH30 (MF12)">
+            <graphics pos="(0.00,0.00)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,10.00)"/>
+        </item>
+        <CNTDLY id="85" externalClockFrequence="0" externalClockFreqUnit="kHz">
+            <item id="85" caption="16-bit CNT12/DLY12/FSM1 (MF12)">
+                <graphics pos="(-33.87,624.43)" angle="0" flipping="0" hidden="0" tOrigin="(40.00,16.00)"/>
+            </item>
+        </CNTDLY>
+        <item id="86" caption="Memory Control Counter">
+            <graphics pos="(-617.40,342.94)" angle="0" flipping="0" hidden="1" tOrigin="(40.00,16.00)"/>
+        </item>
+        <item id="87" caption="ADC">
+            <graphics pos="(-1692.29,101.97)" angle="0" flipping="0" hidden="0" tOrigin="(90.00,95.00)"/>
+        </item>
+        <item id="88" caption="PGA">
+            <graphics pos="(-1848.56,129.69)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,35.00)"/>
+        </item>
+        <item id="89" caption="Math Core">
+            <graphics pos="(-1126.90,-34.05)" angle="0" flipping="0" hidden="1" tOrigin="(37.50,35.00)"/>
+        </item>
+        <item id="90" caption="Data Buffer0">
+            <graphics pos="(-1410.40,142.29)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,25.00)"/>
+        </item>
+        <item id="91" caption="Data Buffer1">
+            <graphics pos="(-1184.57,147.81)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,25.00)"/>
+        </item>
+        <item id="92" caption="Data Buffer2">
+            <graphics pos="(-1393.20,226.35)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,25.00)"/>
+        </item>
+        <item id="93" caption="Data Buffer3">
+            <graphics pos="(180.96,335.98)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,25.00)"/>
+        </item>
+        <MemoryTable id="94">
+            <item id="94" caption="Memory Table">
+                <graphics pos="(-1351.49,383.58)" angle="0" flipping="0" hidden="1" tOrigin="(25.00,20.00)"/>
+            </item>
+            <MemTableWizardSettings numberOutputs="12" tableSize="4096" totalDataSize="65536" version="1"/>
+        </MemoryTable>
+        <item id="95" caption="Multichannel DCMP">
+            <graphics pos="(-1593.20,-93.23)" angle="0" flipping="0" hidden="1" tOrigin="(35.00,60.00)"/>
+        </item>
+        <item id="96" caption="PWM">
+            <graphics pos="(50.38,639.64)" angle="0" flipping="0" hidden="1" tOrigin="(20.00,30.00)"/>
+        </item>
+        <item id="97" caption="Width Converter">
+            <graphics pos="(318.98,169.23)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,55.00)"/>
+        </item>
+        <item id="98" caption="DAC">
+            <graphics pos="(504.06,105.66)" angle="0" flipping="0" hidden="1" tOrigin="(40.00,25.00)"/>
+        </item>
+        <item id="99" caption="Current Source">
+            <graphics pos="(509.97,270.33)" angle="0" flipping="0" hidden="1" tOrigin="(28.00,15.00)"/>
+        </item>
+        <item id="100" caption="DAC Vref Buffer">
+            <graphics pos="(-21.05,-49.68)" angle="0" flipping="0" hidden="1" tOrigin="(32.50,41.00)"/>
+        </item>
+        <item id="101" caption="A CMPH">
+            <graphics pos="(-1848.55,-25.52)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,28.00)"/>
+        </item>
+        <item id="102" caption="TEMP SENSOR">
+            <graphics pos="(-1835.50,290.99)" angle="0" flipping="0" hidden="0" tOrigin="(28.00,15.00)"/>
+        </item>
+        <item id="105" caption="Host Interface (I2C/SPI)">
+            <graphics pos="(-1522.58,625.25)" angle="0" flipping="0" hidden="0" tOrigin="(25.00,45.00)"/>
+        </item>
+        <item id="106" caption="P DLY">
+            <graphics pos="(-195.90,-51.04)" angle="0" flipping="0" hidden="1" tOrigin="(17.50,10.00)"/>
+        </item>
+        <item id="107" caption="FILTER/EDGE DET">
+            <graphics pos="(-746.79,289.24)" angle="0" flipping="0" hidden="0" tOrigin="(27.50,15.00)"/>
+        </item>
+        <item id="108" caption="OSC0">
+            <graphics pos="(-1574.62,508.93)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,35.00)"/>
+        </item>
+        <item id="109" caption="OSC1">
+            <graphics pos="(-2063.84,339.44)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,35.00)"/>
+        </item>
+        <item id="110" caption="POR0">
+            <graphics pos="(-910.97,739.57)" angle="0" flipping="0" hidden="1" tOrigin="(17.50,10.00)"/>
+        </item>
+        <item id="111" caption="POR1">
+            <graphics pos="(-1365.74,741.90)" angle="180" flipping="0" hidden="0" tOrigin="(17.50,10.00)"/>
+        </item>
+        <item id="112" caption="Power Controller">
+            <graphics pos="(-1175.78,-36.19)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,15.00)"/>
+        </item>
+        <item id="113" caption="Data Buffer Status">
+            <graphics pos="(-509.72,241.22)" angle="0" flipping="0" hidden="1" tOrigin="(30.00,15.00)"/>
+        </item>
+        <item id="129" caption="Signal Readback">
+            <graphics pos="(-1198.14,612.74)" angle="0" flipping="0" hidden="0" tOrigin="(30.00,55.00)"/>
+        </item>
+        <wire output="4" input="285" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="SCL" wireState="1">
+            <points/>
+        </wire>
+        <wire output="3" input="286" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="SDA" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="23" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="3" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="5" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="329" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="153" input="246" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="13" wireText="NET13" wireState="0">
+            <points>(-1984.00,344.00); (-1633.00,344.00); (-1633.00,312.00)</points>
+        </wire>
+        <wire output="104" input="267" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="POR1" wireState="1">
+            <points/>
+        </wire>
+        <wire output="50" input="256" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="14" wireText="Started" wireState="0">
+            <points>(-1734.00,416.00); (-1602.00,416.00); (-1602.00,312.00)</points>
+        </wire>
+        <wire output="104" input="116" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="POR1" wireState="1">
+            <points/>
+        </wire>
+        <wire output="54" input="138" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="16" wireText="NET16" wireState="0">
+            <points>(-223.00,419.00); (-149.00,419.00)</points>
+        </wire>
+        <wire output="1" input="128" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="55" input="24" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="29" wireText="Relay H" wireState="0">
+            <points>(-48.00,412.00); (104.00,412.00); (104.00,498.00); (120.00,498.00)</points>
+        </wire>
+        <wire output="64" input="162" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="18" wireText="NET18" wireState="0">
+            <points>(-282.00,859.00); (-208.00,859.00)</points>
+        </wire>
+        <wire output="1" input="152" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="0" input="12" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="GND" wireState="1">
+            <points/>
+        </wire>
+        <wire output="74" input="186" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="41" wireText="Sdn latched" wireState="0">
+            <points>(-41.00,-32.00); (33.00,-32.00)</points>
+        </wire>
+        <wire output="29" input="129" autoRouting="0" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="36" wireText="NET36" wireState="0">
+            <points>(91.00,134.00); (116.00,134.00); (116.00,455.00); (-268.00,455.00); (-268.00,449.00)</points>
+        </wire>
+        <wire output="28" input="153" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="43" wireText="NET43" wireState="0">
+            <points>(94.00,77.00); (224.00,77.00); (224.00,894.00); (-327.00,894.00); (-327.00,888.00)</points>
+        </wire>
+        <wire output="155" input="117" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /4" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="176" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="74" input="50" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="41" wireText="Sdn latched" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="52" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="74" input="11" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="41" wireText="Sdn latched" wireState="1">
+            <points/>
+        </wire>
+        <wire output="80" input="193" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="9" wireText="Reset allowed" wireState="0">
+            <points>(-680.00,199.00); (-604.00,199.00)</points>
+        </wire>
+        <wire output="74" input="188" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="41" wireText="Sdn latched" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="189" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="79" input="177" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="11" wireText="NET11" wireState="0">
+            <points>(-533.00,213.00); (-86.00,213.00); (-86.00,-2.00)</points>
+        </wire>
+        <wire output="7" input="331" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="8" wireText="NET8" wireState="0">
+            <points>(-786.00,305.00); (-768.00,305.00)</points>
+        </wire>
+        <wire output="173" input="190" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="37" wireText="NET37" wireState="0">
+            <points>(-681.00,305.00); (-632.25,305.00); (-632.25,226.00); (-604.00,226.00)</points>
+        </wire>
+        <wire output="50" input="292" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="14" wireText="Started" wireState="0">
+            <points>(-1734.00,416.00); (-1720.00,416.00); (-1720.00,49.00); (-1823.00,49.00); (-1823.00,34.00)</points>
+        </wire>
+        <wire output="13" input="293" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="33" wireText="NET33" wireState="0">
+            <points>(-1963.00,26.00); (-1888.00,26.00); (-1888.00,21.00); (-1870.00,21.00)</points>
+        </wire>
+        <wire output="10" input="294" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="6" wireText="NET6" wireState="0">
+            <points>(-1962.00,-81.00); (-1888.00,-81.00); (-1888.00,-13.00); (-1870.00,-13.00)</points>
+        </wire>
+        <wire output="123" input="51" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="12" wireText="NET12" wireState="0">
+            <points>(-1779.00,2.00); (-1420.00,2.00); (-1420.00,-140.00); (-409.00,-140.00)</points>
+        </wire>
+        <wire output="104" input="257" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="POR1" wireState="1">
+            <points/>
+        </wire>
+        <wire output="105" input="247" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="30" wireText="NET30" wireState="0">
+            <points>(-1773.00,157.00); (-1732.00,157.00); (-1732.00,120.00); (-1713.00,120.00)</points>
+        </wire>
+        <wire output="106" input="251" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="38" wireText="NET38" wireState="0">
+            <points>(-1773.00,172.00); (-1732.00,172.00); (-1732.00,209.00); (-1713.00,209.00)</points>
+        </wire>
+        <wire output="102" input="316" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="39" wireText="NET39" wireState="0">
+            <points>(-1492.00,275.00); (-1456.00,275.00); (-1456.00,168.00); (-1431.00,168.00)</points>
+        </wire>
+        <wire output="101" input="314" autoRouting="1" pen="#ff8000ff;3.00;1;32;128" lineType="4" protected="1" CWLid="40" wireText="NET40" wireState="0">
+            <points>(-1492.00,198.00); (-1444.00,198.00); (-1444.00,152.00); (-1431.00,152.00)</points>
+        </wire>
+        <wire output="0" input="258" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="GND" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="17" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="65" input="18" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="15" wireText="Relay L" wireState="0">
+            <points>(-107.00,852.00); (92.00,852.00); (92.00,823.00); (115.00,823.00)</points>
+        </wire>
+        <wire output="25" input="61" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="1" wireText="Cur dir" wireState="1">
+            <points/>
+        </wire>
+        <wire output="25" input="64" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="1" wireText="Cur dir" wireState="1">
+            <points/>
+        </wire>
+        <wire output="75" input="60" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="42" wireText="Sdn delayed" wireState="1">
+            <points/>
+        </wire>
+        <wire output="75" input="63" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="42" wireText="Sdn delayed" wireState="1">
+            <points/>
+        </wire>
+        <wire output="156" input="105" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /8" wireState="1">
+            <points/>
+        </wire>
+        <wire output="45" input="59" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="0" wireText="NET0" wireState="0">
+            <points>(-158.00,115.00); (8.00,115.00); (8.00,90.00); (23.00,90.00)</points>
+        </wire>
+        <wire output="45" input="62" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="0" wireText="NET0" wireState="0">
+            <points>(-158.00,115.00); (8.00,115.00); (8.00,147.00); (20.00,147.00)</points>
+        </wire>
+        <wire output="6" input="26" autoRouting="1" pen="#cd80ffff;1.00;1;32;128" lineType="5" protected="0" CWLid="32" wireText="NET32" wireState="0">
+            <points>(-815.00,91.00); (-429.01,91.00); (-429.01,9.00); (-366.00,9.00)</points>
+        </wire>
+        <wire output="16" input="178" autoRouting="1" pen="#cd80ffff;1.00;1;32;128" lineType="5" protected="0" CWLid="44" wireText="NET44" wireState="0">
+            <points>(-288.00,17.00); (-160.00,17.00); (-160.00,-27.00); (-132.00,-27.00)</points>
+        </wire>
+        <wire output="0" input="25" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="GND" wireState="1">
+            <points/>
+        </wire>
+        <wire output="74" input="104" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="41" wireText="Sdn latched" wireState="1">
+            <points/>
+        </wire>
+        <wire output="160" input="185" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /512" wireState="1">
+            <points/>
+        </wire>
+        <wire output="160" input="161" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /512" wireState="1">
+            <points/>
+        </wire>
+        <wire output="160" input="137" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /512" wireState="1">
+            <points/>
+        </wire>
+        <wire output="160" input="197" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /512" wireState="1">
+            <points/>
+        </wire>
+        <wire output="65" input="339" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="15" wireText="Relay L" wireState="1">
+            <points/>
+        </wire>
+        <wire output="55" input="338" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="29" wireText="Relay H" wireState="1">
+            <points/>
+        </wire>
+        <wire output="74" input="337" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="41" wireText="Sdn latched" wireState="1">
+            <points/>
+        </wire>
+        <wire output="80" input="336" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="9" wireText="Reset allowed" wireState="1">
+            <points/>
+        </wire>
+        <wire output="162" input="317" autoRouting="1" pen="#ff8000ff;3.00;1;32;128" lineType="4" protected="1" CWLid="-1" wireText="Buffer0 OUT" wireState="1">
+            <points/>
+        </wire>
+        <wire output="24" input="318" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="46" wireText="NET46" wireState="0">
+            <points>(-1175.00,296.00); (-1169.00,296.00); (-1169.00,213.00); (-1212.00,213.00); (-1212.00,188.00); (-1206.00,188.00)</points>
+        </wire>
+        <wire output="8" input="259" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="7" wireText="NET7" wireState="0">
+            <points>(-1932.00,113.00); (-1888.00,113.00); (-1888.00,134.00); (-1870.00,134.00)</points>
+        </wire>
+        <wire output="50" input="315" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="14" wireText="Started" wireState="0">
+            <points>(-1734.00,416.00); (-1468.00,416.00); (-1468.00,183.00); (-1431.00,183.00)</points>
+        </wire>
+        <wire output="50" input="321" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="14" wireText="Started" wireState="0">
+            <points>(-1734.00,416.00); (-1432.00,416.00); (-1432.00,267.00); (-1414.00,267.00)</points>
+        </wire>
+        <wire output="55" input="47" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="29" wireText="Relay H" wireState="1">
+            <points/>
+        </wire>
+        <wire output="1" input="48" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="VDD" wireState="1">
+            <points/>
+        </wire>
+        <wire output="17" input="49" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="49" wireText="NET49" wireState="0">
+            <points>(-1202.00,367.00); (-1220.00,367.00); (-1220.00,327.00)</points>
+        </wire>
+        <wire output="0" input="28" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="-1" wireText="GND" wireState="1">
+            <points/>
+        </wire>
+        <wire output="156" input="216" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /8" wireState="1">
+            <points/>
+        </wire>
+        <wire output="161" input="217" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="45" wireText="NET45" wireState="0">
+            <points>(-1330.00,178.00); (-1288.00,178.00); (-1288.00,455.00); (-1272.00,455.00)</points>
+        </wire>
+        <wire output="90" input="27" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="47" wireText="NET47" wireState="0">
+            <points>(-1151.00,455.00); (-1108.00,455.00); (-1108.00,359.00); (-1124.00,359.00)</points>
+        </wire>
+        <wire output="161" input="319" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="45" wireText="NET45" wireState="0">
+            <points>(-1330.00,178.00); (-1228.00,178.00); (-1228.00,173.00); (-1206.00,173.00)</points>
+        </wire>
+        <wire output="102" input="322" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="39" wireText="NET39" wireState="0">
+            <points>(-1492.00,275.00); (-1456.00,275.00); (-1456.00,252.00); (-1414.00,252.00)</points>
+        </wire>
+        <wire output="101" input="320" autoRouting="1" pen="#ff8000ff;3.00;1;32;128" lineType="4" protected="1" CWLid="40" wireText="NET40" wireState="0">
+            <points>(-1492.00,198.00); (-1432.00,198.00); (-1432.00,236.00); (-1414.00,236.00)</points>
+        </wire>
+        <wire output="105" input="248" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="30" wireText="NET30" wireState="0">
+            <points>(-1773.00,157.00); (-1732.00,157.00); (-1732.00,142.00); (-1713.00,142.00)</points>
+        </wire>
+        <wire output="106" input="252" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="38" wireText="NET38" wireState="0">
+            <points>(-1773.00,172.00); (-1732.00,172.00); (-1732.00,231.00); (-1713.00,231.00)</points>
+        </wire>
+        <wire output="171" input="261" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="48" wireText="NET48" wireState="0">
+            <points>(-1760.00,306.00); (-1754.00,306.00); (-1754.00,213.00); (-1876.00,213.00); (-1876.00,152.00); (-1870.00,152.00)</points>
+        </wire>
+        <wire output="2" input="130" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="5" wireText="NET5" wireState="0">
+            <points>(-707.00,449.00); (-320.00,449.00); (-320.00,424.00); (-314.00,424.00)</points>
+        </wire>
+        <wire output="11" input="154" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="31" wireText="NET31" wireState="0">
+            <points>(-702.00,879.00); (-379.00,879.00); (-379.00,864.00); (-373.00,864.00)</points>
+        </wire>
+        <wire output="95" input="243" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="17" wireText="NET17" wireState="0">
+            <points>(-107.87,647.92); (-54.87,647.92)</points>
+        </wire>
+        <wire output="54" input="231" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="16" wireText="NET16" wireState="0">
+            <points>(-223.00,419.00); (-208.00,419.00); (-208.00,643.00); (-179.00,643.00)</points>
+        </wire>
+        <wire output="55" input="230" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="29" wireText="Relay H" wireState="0">
+            <points>(-48.00,412.00); (-42.00,412.00); (-42.00,609.00); (-196.00,609.00); (-196.00,633.00); (-179.00,633.00)</points>
+        </wire>
+        <wire output="64" input="233" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="18" wireText="NET18" wireState="0">
+            <points>(-282.00,859.00); (-232.00,859.00); (-232.00,663.00); (-179.00,663.00)</points>
+        </wire>
+        <wire output="65" input="232" autoRouting="1" pen="#00ff00ff;1.00;1;32;128" lineType="1" protected="0" CWLid="15" wireText="Relay L" wireState="0">
+            <points>(-107.00,852.00); (-101.00,852.00); (-101.00,681.00); (-196.00,681.00); (-196.00,653.00); (-179.00,653.00)</points>
+        </wire>
+        <wire output="160" input="242" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="-1" wireText="OSC1 CLK /512" wireState="1">
+            <points/>
+        </wire>
+        <wire output="96" input="4" autoRouting="1" pen="#cd80ffff;1.00;1;32;128" lineType="5" protected="0" CWLid="19" wireText="NET19" wireState="0">
+            <points>(66.00,648.00); (105.00,648.00); (105.00,660.00); (109.00,660.00)</points>
+        </wire>
+        <wire output="5" input="287" autoRouting="1" pen="#ff8000ff;1.00;1;32;128" lineType="2" protected="1" CWLid="20" wireText="SA_SEL0" wireState="1">
+            <points/>
+        </wire>
+        <textLabel pos="(-678.89,166.69)" angle="0.00" textColor="#ffff00ff" backgroundColor="#14141464">Reset allowed</textLabel>
+        <polygonShape points="(-464.16,-172.36); (296.19,-172.36); (296.19,232.84); (-464.16,232.84)" color="#00b0f0ff" textColor="#ffffffff" stroke="1" label="Shutdown logic" labelPos="(-464.16,-196.36)"/>
+        <polygonShape points="(-464.33,273.11); (297.31,273.11); (297.31,976.42); (-464.33,976.42)" color="#00b0f0ff" textColor="#ffffffff" stroke="1" label="Turn on logic" labelPos="(-464.33,249.11)"/>
+    </chip>
+    <emulatorConfiguration version="4" oldestCompatibleVersion="4">
+        <settings>
+            <autoApply value="0"/>
+            <platformSelector id="3"/>
+        </settings>
+        <platform id="0" friendlyName="GreenPAK DIP Development Platform">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="1" friendlyName="GreenPAK Advanced Development Platform">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="2" friendlyName="GreenPAK Pro Development Platform">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="4" friendlyName="GreenPAK Serial Debugger">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="5" friendlyName="GreenPAK Advanced Development Platform w/ Logic Level Adapter #1">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="6" friendlyName="ForgeFPGA Deluxe Development Platform">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="7" friendlyName="ForgeFPGA Evaluation Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="8" friendlyName="SLG51000 Demo Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="9" friendlyName="SLG51001 Demo Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="10" friendlyName="SLG51002 Demo Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="11" friendlyName="GreenPAK Serial Debugger">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="12" friendlyName="GreenPAK Lite Development Platform">
+            <lastConfiguration modified="1">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="1"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector>1:0;2:0;3:0;4:0;5:0;6:0;7:0;8:0;9:0;10:0;11:0;12:0;13:0;14:0;15:0;16:0</ExpansionConnector>
+                    <TestPoints>
+                        <TPC ID="1" Type="15">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="81" GlobalLink="1"/>
+                            <PlainVoltage V="3.3"/>
+                        </TPC>
+                        <TPC ID="2" Type="1">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="87" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="3" Type="4">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="69" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="4" Type="4">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="82" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="5" Type="1">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="84" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="6" Type="6">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="89" GlobalLink="1"/>
+                            <ButtonSettings UpSide="1" DownSide="0" LatchMode="1" DefaultConnection="1" ConnectedSide="0"/>
+                        </TPC>
+                        <TPC ID="7" Type="1">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="85" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="8" Type="1">
+                            <BaseOption LEDEnable="1" LEDInvertion="0" HotKey="73" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="9" Type="6">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="79" GlobalLink="1"/>
+                            <ButtonSettings UpSide="1" DownSide="0" LatchMode="1" DefaultConnection="1" ConnectedSide="0"/>
+                        </TPC>
+                        <TPC ID="10" Type="1">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="80" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="11" Type="3">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="-1" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="12" Type="6">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="65" GlobalLink="1"/>
+                            <ButtonSettings UpSide="1" DownSide="0" LatchMode="1" DefaultConnection="1" ConnectedSide="0"/>
+                        </TPC>
+                        <TPC ID="13" Type="6">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="83" GlobalLink="1"/>
+                            <ButtonSettings UpSide="1" DownSide="0" LatchMode="1" DefaultConnection="1" ConnectedSide="1"/>
+                        </TPC>
+                        <TPC ID="14" Type="1">
+                            <BaseOption LEDEnable="1" LEDInvertion="0" HotKey="68" GlobalLink="1"/>
+                        </TPC>
+                        <TPC ID="15" Type="6">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="70" GlobalLink="1"/>
+                            <ButtonSettings UpSide="1" DownSide="0" LatchMode="1" DefaultConnection="1" ConnectedSide="0"/>
+                        </TPC>
+                        <TPC ID="16" Type="1">
+                            <BaseOption LEDEnable="0" LEDInvertion="0" HotKey="71" GlobalLink="1"/>
+                        </TPC>
+                    </TestPoints>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="13" friendlyName="HVPAK Demo Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="14" friendlyName="SLG47105V Training Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="15" friendlyName="Power GreenPAK Development Motherboard">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="16" friendlyName="ForgeFPGA Deluxe Development Platform Rev. 2.0">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="17" friendlyName="HVPAK SLG47125 Demo Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="18" friendlyName="Go Configure Development Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="19" friendlyName="HVPAK SLG47125 Demo Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+        <platform id="20" friendlyName="Go Configure Development Board">
+            <lastConfiguration modified="0">
+                <SaveEmulator Name="Default">
+                    <PowerOptions synced="0"/>
+                    <ExternalChipConnectionSource source="0"/>
+                    <PowerSwitch internalPower="1" externalPower="0"/>
+                    <ExpansionConnector></ExpansionConnector>
+                    <TestPoints/>
+                    <I2C slaveAddress="-1"/>
+                </SaveEmulator>
+            </lastConfiguration>
+            <savedConfigurations/>
+        </platform>
+    </emulatorConfiguration>
+    <simulationConfiguration version="16" compatibleVersion="16" activePreset="-1">
+        <draftPreset>
+            <simulationPreset index="-1" name="Default" customGroupLayout="false" customParametricDcGroupLayout="false">
+                <transientAnalyses>
+                    <transientAnalysis stopTime="45m" maxTimeStep="40u" startTime="0" stepTime="40u" temperature="45" useInitialConditions="false" vdd="3.3"/>
+                </transientAnalyses>
+                <parametricDcAnalyses/>
+                <pinProbes>
+                    <pinProbe instrumentId="41" measurementFlags="1">
+                        <IdDto category="0" componentType="2" componentNumber="8" pinNumber="1"/>
+                    </pinProbe>
+                    <pinProbe instrumentId="42" measurementFlags="1">
+                        <IdDto category="1" componentType="5" componentNumber="0" pinNumber="0"/>
+                    </pinProbe>
+                    <pinProbe instrumentId="43" measurementFlags="1">
+                        <IdDto category="2" componentType="7" componentNumber="23" pinNumber="0"/>
+                    </pinProbe>
+                    <pinProbe instrumentId="44" measurementFlags="1">
+                        <IdDto category="2" componentType="16" componentNumber="9" pinNumber="0"/>
+                    </pinProbe>
+                    <pinProbe instrumentId="45" measurementFlags="1">
+                        <IdDto category="2" componentType="9" componentNumber="26" pinNumber="0"/>
+                    </pinProbe>
+                    <pinProbe instrumentId="46" measurementFlags="1">
+                        <IdDto category="0" componentType="2" componentNumber="7" pinNumber="1"/>
+                    </pinProbe>
+                </pinProbes>
+                <groups>
+                    <group name="GreenPAK -&gt; 3-bit LUT23 -&gt; OUT" customGroupLayout="false" groupSize="(1370;200)">
+                        <waveforms>
+                            <WaveformIdData analysisType="0" pinIdStr="2;7;23;0" xAxisBinding="0;;-1;-1;-1">
+                                <parameters/>
+                            </WaveformIdData>
+                        </waveforms>
+                    </group>
+                    <group name="GreenPAK -&gt; CNT9/DLY9 -&gt; nOUT" customGroupLayout="false" groupSize="(1370;200)">
+                        <waveforms>
+                            <WaveformIdData analysisType="0" pinIdStr="2;16;9;0" xAxisBinding="0;;-1;-1;-1">
+                                <parameters/>
+                            </WaveformIdData>
+                        </waveforms>
+                    </group>
+                    <group name="GreenPAK -&gt; DFF 26 -&gt; Q" customGroupLayout="false" groupSize="(1370;200)">
+                        <waveforms>
+                            <WaveformIdData analysisType="0" pinIdStr="2;9;26;0" xAxisBinding="0;;-1;-1;-1">
+                                <parameters/>
+                            </WaveformIdData>
+                        </waveforms>
+                    </group>
+                    <group name="GreenPAK -&gt; EDGE DET -&gt; nOUT" customGroupLayout="false" groupSize="(1370;200)">
+                        <waveforms>
+                            <WaveformIdData analysisType="0" pinIdStr="1;5;0;0" xAxisBinding="0;;-1;-1;-1">
+                                <parameters/>
+                            </WaveformIdData>
+                        </waveforms>
+                    </group>
+                    <group name="GreenPAK -&gt; PIN 7 -&gt; OUT" customGroupLayout="false" groupSize="(1370;200)">
+                        <waveforms>
+                            <WaveformIdData analysisType="0" pinIdStr="0;2;7;1" xAxisBinding="0;;-1;-1;-1">
+                                <parameters/>
+                            </WaveformIdData>
+                        </waveforms>
+                    </group>
+                    <group name="GreenPAK -&gt; PIN 8 -&gt; OUT" customGroupLayout="false" groupSize="(1370;200)">
+                        <waveforms>
+                            <WaveformIdData analysisType="0" pinIdStr="0;2;8;1" xAxisBinding="0;;-1;-1;-1">
+                                <parameters/>
+                            </WaveformIdData>
+                        </waveforms>
+                    </group>
+                </groups>
+                <parametricDcGroups/>
+                <waveforms>
+                    <waveform>
+                        <waveformSetup penColor="#fff940" penWidth="2" style="0" attributes="1" symbol="-1" symSize="6" symColor="#ff0000"/>
+                        <WaveformIdData analysisType="0" pinIdStr="0;2;7;1" xAxisBinding="0;;-1;-1;-1">
+                            <parameters/>
+                        </WaveformIdData>
+                    </waveform>
+                    <waveform>
+                        <waveformSetup penColor="#fda740" penWidth="2" style="0" attributes="1" symbol="-1" symSize="6" symColor="#ff0000"/>
+                        <WaveformIdData analysisType="0" pinIdStr="0;2;8;1" xAxisBinding="0;;-1;-1;-1">
+                            <parameters/>
+                        </WaveformIdData>
+                    </waveform>
+                    <waveform>
+                        <waveformSetup penColor="#46f8ff" penWidth="2" style="0" attributes="1" symbol="-1" symSize="6" symColor="#ff0000"/>
+                        <WaveformIdData analysisType="0" pinIdStr="1;5;0;0" xAxisBinding="0;;-1;-1;-1">
+                            <parameters/>
+                        </WaveformIdData>
+                    </waveform>
+                    <waveform>
+                        <waveformSetup penColor="#26e056" penWidth="2" style="0" attributes="1" symbol="-1" symSize="6" symColor="#ff0000"/>
+                        <WaveformIdData analysisType="0" pinIdStr="2;7;23;0" xAxisBinding="0;;-1;-1;-1">
+                            <parameters/>
+                        </WaveformIdData>
+                    </waveform>
+                    <waveform>
+                        <waveformSetup penColor="#46f8ff" penWidth="2" style="0" attributes="1" symbol="-1" symSize="6" symColor="#ff0000"/>
+                        <WaveformIdData analysisType="0" pinIdStr="2;9;26;0" xAxisBinding="0;;-1;-1;-1">
+                            <parameters/>
+                        </WaveformIdData>
+                    </waveform>
+                    <waveform>
+                        <waveformSetup penColor="#5cd4ae" penWidth="2" style="0" attributes="1" symbol="-1" symSize="6" symColor="#ff0000"/>
+                        <WaveformIdData analysisType="0" pinIdStr="2;16;9;0" xAxisBinding="0;;-1;-1;-1">
+                            <parameters/>
+                        </WaveformIdData>
+                    </waveform>
+                </waveforms>
+                <components>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="0" componentNumber="1"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-2163.45;203.086)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="GND" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="0" componentNumber="2"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-2285.86;310.533)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="GND" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="0" componentNumber="3"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-1019.68;956.219)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="GND" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="39" componentNumber="1"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-2171.41;24.2097)" rotationState="3" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="R1" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps>
+                            <param id="r" affinity="3" value="10m" defaultValue=""/>
+                        </instanceProps>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="43" componentNumber="1"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-2216.02;236.157)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="V1" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                            <param id="has_rc" affinity="1" value="1" defaultValue=""/>
+                            <param id="int_r" affinity="3" value="10" defaultValue=""/>
+                            <param id="int_c" affinity="3" value="100n" defaultValue=""/>
+                            <param id="show_one_period" affinity="1" value="0" defaultValue=""/>
+                            <param id="has_limited_voltage" affinity="1" value="1" defaultValue=""/>
+                            <param id="dc_analysis_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="signal_type" affinity="1" value="1" defaultValue=""/>
+                            <param id="prestart_delay" affinity="3" value="0" defaultValue=""/>
+                            <param id="prestart_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_count" affinity="1" value="2" defaultValue=""/>
+                            <param id="end_state" affinity="1" value="1" defaultValue=""/>
+                            <param id="ramp_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="ramp_rise_time" affinity="3" value="1m" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="43" componentNumber="2"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-963.232;279.48)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="V2" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                            <param id="has_rc" affinity="1" value="1" defaultValue=""/>
+                            <param id="int_r" affinity="3" value="10" defaultValue=""/>
+                            <param id="int_c" affinity="3" value="100n" defaultValue=""/>
+                            <param id="show_one_period" affinity="1" value="0" defaultValue=""/>
+                            <param id="has_limited_voltage" affinity="1" value="0" defaultValue=""/>
+                            <param id="dc_analysis_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="signal_type" affinity="1" value="6" defaultValue=""/>
+                            <param id="prestart_delay" affinity="3" value="0" defaultValue=""/>
+                            <param id="prestart_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_count" affinity="1" value="2" defaultValue=""/>
+                            <param id="end_state" affinity="1" value="1" defaultValue=""/>
+                            <param id="lp_mode" affinity="1" value="1" defaultValue=""/>
+                            <param id="lp_level_adj" affinity="1" value="0" defaultValue=""/>
+                            <param id="lp_max_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="lp_min_voltage" affinity="3" value="0" defaultValue=""/>
+                            <param id="lp_rise_time" affinity="3" value="1u" defaultValue=""/>
+                            <param id="lp_fall_time" affinity="3" value="1u" defaultValue=""/>
+                            <param id="lp_values" affinity="4" value="10m 0 0|1m 3.3 1|1m 0 0|17m 3.3 1|1m 0 0|22m 3.3 1" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="43" componentNumber="3"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-990.453;64.3855)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="V3" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                            <param id="has_rc" affinity="1" value="1" defaultValue=""/>
+                            <param id="int_r" affinity="3" value="10" defaultValue=""/>
+                            <param id="int_c" affinity="3" value="100n" defaultValue=""/>
+                            <param id="show_one_period" affinity="1" value="0" defaultValue=""/>
+                            <param id="has_limited_voltage" affinity="1" value="0" defaultValue=""/>
+                            <param id="dc_analysis_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="signal_type" affinity="1" value="4" defaultValue=""/>
+                            <param id="prestart_delay" affinity="3" value="0" defaultValue=""/>
+                            <param id="prestart_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_count" affinity="1" value="2" defaultValue=""/>
+                            <param id="end_state" affinity="1" value="1" defaultValue=""/>
+                            <param id="custom_signal_time_scale" affinity="1" value="5" defaultValue=""/>
+                            <param id="custom_signal_voltage_scale" affinity="1" value="5" defaultValue=""/>
+                            <param id="custom_signal_values_hash" affinity="4" value="0" defaultValue=""/>
+                            <param id="custom_signal_is_high_precision_signal" affinity="1" value="0" defaultValue="0"/>
+                            <param id="custom_signal_values" affinity="4" value="0 0|4.9m 0|5m 3.3|17m 3.3|17.1m 0|18m 0|18.1m 3.3|1000m 0" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="43" componentNumber="4"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-961.262;866.366)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="V4" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                            <param id="has_rc" affinity="1" value="1" defaultValue=""/>
+                            <param id="int_r" affinity="3" value="10" defaultValue=""/>
+                            <param id="int_c" affinity="3" value="100n" defaultValue=""/>
+                            <param id="show_one_period" affinity="1" value="0" defaultValue=""/>
+                            <param id="has_limited_voltage" affinity="1" value="0" defaultValue=""/>
+                            <param id="dc_analysis_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="signal_type" affinity="1" value="1" defaultValue=""/>
+                            <param id="prestart_delay" affinity="3" value="6m" defaultValue=""/>
+                            <param id="prestart_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_count" affinity="1" value="2" defaultValue=""/>
+                            <param id="end_state" affinity="1" value="1" defaultValue=""/>
+                            <param id="ramp_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="ramp_rise_time" affinity="3" value="1u" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="43" componentNumber="5"/>
+                        <componentUiSettings isFlippedHorizontally="false" isFlippedVertically="false" visible="true" position="(-949.026;429.129)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="V5" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                            <param id="has_rc" affinity="1" value="1" defaultValue=""/>
+                            <param id="int_r" affinity="3" value="10" defaultValue=""/>
+                            <param id="int_c" affinity="3" value="100n" defaultValue=""/>
+                            <param id="show_one_period" affinity="1" value="0" defaultValue=""/>
+                            <param id="has_limited_voltage" affinity="1" value="0" defaultValue=""/>
+                            <param id="dc_analysis_voltage" affinity="3" value="3.3" defaultValue=""/>
+                            <param id="signal_type" affinity="1" value="4" defaultValue=""/>
+                            <param id="prestart_delay" affinity="3" value="0" defaultValue=""/>
+                            <param id="prestart_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_count" affinity="1" value="2" defaultValue=""/>
+                            <param id="end_state" affinity="1" value="1" defaultValue=""/>
+                            <param id="custom_signal_time_scale" affinity="1" value="5" defaultValue=""/>
+                            <param id="custom_signal_voltage_scale" affinity="1" value="5" defaultValue=""/>
+                            <param id="custom_signal_values_hash" affinity="4" value="0" defaultValue=""/>
+                            <param id="custom_signal_is_high_precision_signal" affinity="1" value="0" defaultValue="0"/>
+                            <param id="custom_signal_values" affinity="4" value="0 0|6m 0|6.1m 3.3|14m 3.3|14.1m 0|15m 0|15.1m 3.3|1000m 0" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                    <component simulationModel="" defaultSimulationModel="">
+                        <componentId category="5" componentType="44" componentNumber="1"/>
+                        <componentUiSettings isFlippedHorizontally="true" isFlippedVertically="false" visible="true" position="(-2274.49;-52.1495)" rotationState="0" sceneIndex="0"/>
+                        <schematicProps>
+                            <param id="name" affinity="4" value="I1" defaultValue=""/>
+                            <param id="mfg" affinity="4" value="" defaultValue=""/>
+                            <param id="part_number" affinity="4" value="" defaultValue=""/>
+                            <param id="has_rc" affinity="1" value="0" defaultValue=""/>
+                            <param id="int_r" affinity="3" value="1M" defaultValue=""/>
+                            <param id="int_c" affinity="3" value="10p" defaultValue=""/>
+                            <param id="show_one_period" affinity="1" value="0" defaultValue=""/>
+                            <param id="has_limited_voltage" affinity="1" value="0" defaultValue=""/>
+                            <param id="dc_analysis_voltage" affinity="3" value="1u" defaultValue=""/>
+                            <param id="signal_type" affinity="1" value="1" defaultValue=""/>
+                            <param id="prestart_delay" affinity="3" value="6m" defaultValue=""/>
+                            <param id="prestart_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_state" affinity="1" value="0" defaultValue=""/>
+                            <param id="repeat_count" affinity="1" value="2" defaultValue=""/>
+                            <param id="end_state" affinity="1" value="1" defaultValue=""/>
+                            <param id="ramp_voltage" affinity="3" value="2" defaultValue=""/>
+                            <param id="ramp_rise_time" affinity="3" value="4m" defaultValue=""/>
+                        </schematicProps>
+                        <instanceProps/>
+                    </component>
+                </components>
+                <networks>
+                    <network networkId="28" name="NET28">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="43" componentNumber="5" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="3"/>
+                                </to>
+                                <path>
+                                    <point value="(-886;450)"/>
+                                    <point value="(-808;450)"/>
+                                    <point value="(-808;449)"/>
+                                    <point value="(-792;449)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="27" name="NET27">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="43" componentNumber="4" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="12"/>
+                                </to>
+                                <path>
+                                    <point value="(-898;887)"/>
+                                    <point value="(-808;887)"/>
+                                    <point value="(-808;884)"/>
+                                    <point value="(-787;884)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="26" name="NET26">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="43" componentNumber="3" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="7"/>
+                                </to>
+                                <path>
+                                    <point value="(-927;85)"/>
+                                    <point value="(-910;85)"/>
+                                    <point value="(-910;86)"/>
+                                    <point value="(-900;86)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="25" name="NET25">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="3" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="43" componentNumber="2" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-1004;934)"/>
+                                    <point value="(-1004;300)"/>
+                                    <point value="(-985;300)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="3" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="43" componentNumber="3" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-1004;934)"/>
+                                    <point value="(-1004;242)"/>
+                                    <point value="(-1024;242)"/>
+                                    <point value="(-1024;85)"/>
+                                    <point value="(-1012;85)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="3" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="43" componentNumber="4" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-1004;934)"/>
+                                    <point value="(-1004;887)"/>
+                                    <point value="(-983;887)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="3" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="43" componentNumber="5" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-1004;934)"/>
+                                    <point value="(-1004;450)"/>
+                                    <point value="(-971;450)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="24" name="NET24">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="43" componentNumber="2" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="8"/>
+                                </to>
+                                <path>
+                                    <point value="(-900;300)"/>
+                                    <point value="(-871;300)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="10" name="NET10">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="44" componentNumber="1" pinNumber="1"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="39" componentNumber="1" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-2211;-31)"/>
+                                    <point value="(-2147;-31)"/>
+                                    <point value="(-2147;-15)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="11"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="39" componentNumber="1" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-2047;-76)"/>
+                                    <point value="(-2147;-76)"/>
+                                    <point value="(-2147;-15)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="4" name="NET4">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="43" componentNumber="1" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-2153;257)"/>
+                                    <point value="(-2116;257)"/>
+                                    <point value="(-2116;258)"/>
+                                    <point value="(-2099;258)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="3" name="NET3">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="2" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="43" componentNumber="1" pinNumber="1"/>
+                                </to>
+                                <path>
+                                    <point value="(-2270;289)"/>
+                                    <point value="(-2270;257)"/>
+                                    <point value="(-2238;257)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                    <network networkId="2" name="NET2">
+                        <connections>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="1" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="2"/>
+                                </to>
+                                <path>
+                                    <point value="(-2147;181)"/>
+                                    <point value="(-2147;171)"/>
+                                    <point value="(-2110;171)"/>
+                                    <point value="(-2110;180)"/>
+                                    <point value="(-2106;180)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="1" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="39" componentNumber="1" pinNumber="0"/>
+                                </to>
+                                <path>
+                                    <point value="(-2147;181)"/>
+                                    <point value="(-2147;77)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="5" componentType="0" componentNumber="1" pinNumber="0"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="44" componentNumber="1" pinNumber="0"/>
+                                </to>
+                                <path>
+                                    <point value="(-2147;181)"/>
+                                    <point value="(-2147;86)"/>
+                                    <point value="(-2314;86)"/>
+                                    <point value="(-2314;-31)"/>
+                                    <point value="(-2296;-31)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="9"/>
+                                </from>
+                                <to>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="2"/>
+                                </to>
+                                <path>
+                                    <point value="(-2017;118)"/>
+                                    <point value="(-2112;118)"/>
+                                    <point value="(-2112;180)"/>
+                                    <point value="(-2106;180)"/>
+                                </path>
+                            </connection>
+                            <connection connectionType="0" routingType="0" sceneIndex="0">
+                                <from>
+                                    <IdDto category="100" componentType="45" componentNumber="0" pinNumber="14"/>
+                                </from>
+                                <to>
+                                    <IdDto category="5" componentType="39" componentNumber="1" pinNumber="0"/>
+                                </to>
+                                <path>
+                                    <point value="(-2048;31)"/>
+                                    <point value="(-2092;31)"/>
+                                    <point value="(-2092;97)"/>
+                                    <point value="(-2147;97)"/>
+                                    <point value="(-2147;77)"/>
+                                </path>
+                            </connection>
+                        </connections>
+                    </network>
+                </networks>
+            </simulationPreset>
+        </draftPreset>
+        <simulationPresets/>
+    </simulationConfiguration>
+    <projectData>
+        <specs>
+            <lastModify lastModifyValue="04.06.2026 20:09:33"/>
+            <vddSpecs vddMin="3" vddTyp="3.3" vddMax="3.5"/>
+            <tempSpecs tempMin="25" tempTyp="25" tempMax="25"/>
+        </specs>
+        <projectDataFields>
+            <textLineDataField name="Customer Name" id="2" text=""/>
+            <textLineDataField name="Customer Project Name" id="3" text=""/>
+            <textLineDataField name="Customer Project Number" id="4" text=""/>
+            <textLineDataField name="Customer Version Number" id="5" text=""/>
+            <multiTextLineDataField>
+                <textLineDataField name="Notes" id="6" text=""/>
+            </multiTextLineDataField>
+        </projectDataFields>
+    </projectData>
+    <i2cTool>
+        <i2cDebugger version="1"/>
+        <i2cStepper version="1" rowCount="0"/>
+        <i2cRegsTable version="1" tabCount="0"/>
+    </i2cTool>
+<logicAnalyzer>
+    <metadata>
+        <autosavePreset>-1</autosavePreset>
+        <currentPreset>-1</currentPreset>
+        <version>3</version>
+    </metadata>
+    <presetList/>
+</logicAnalyzer>
+
+</GPDProject>
