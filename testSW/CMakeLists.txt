@@ -49,6 +49,11 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     App/Src/appMain.c
+    App/Src/debug_console.c
+    App/Src/relay_io.c
+    App/Src/slg47011.c
+    App/Src/test_ui.c
+    App/Src/slg47011_config_data.c
     Libs/sSerial/src/sSerial.c
 )
 
