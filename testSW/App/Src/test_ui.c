@@ -18,6 +18,11 @@ static const char *bitText(uint8_t value, uint8_t bit)
     return ((value & (1u << bit)) != 0u) ? "HIGH" : "LOW";
 }
 
+static const char *boolText(bool value)
+{
+    return value ? "ON" : "OFF";
+}
+
 /*
  * For an open-drain output:
  *   GPIO_PIN_RESET = actively pulling low
@@ -60,6 +65,21 @@ bool TestUi_HandleCommand(uint8_t ch)
         case 'l':
         case 'L':
             RelayIo_ToggleEnL();
+            return true;
+
+        case 'w':
+        case 'W':
+            SLG47011_SetWdtKicksEnabled(!SLG47011_GetWdtKicksEnabled());
+            return true;
+
+        case 'p':
+        case 'P':
+            SLG47011_ToggleHostOutput(SLG47011_HOST_OUTPUT_RELAY_POWER, NULL);
+            return true;
+
+        case 'a':
+        case 'A':
+            SLG47011_ToggleHostOutput(SLG47011_HOST_OUTPUT_ADC_SHUTDOWN, NULL);
             return true;
 
         case 'd':
@@ -156,6 +176,9 @@ void TestUi_Print(const TestUiState_t *state)
     printf("  s : toggle REL_SHUTDOWN_N\r\n");
     printf("  h : toggle REL_EN_H\r\n");
     printf("  l : toggle REL_EN_L\r\n");
+    printf("  w : toggle WDT kicks on I2C host out 0\r\n");
+    printf("  p : toggle relay power on I2C host out 1\r\n");
+    printf("  a : toggle ADC shutdown on I2C host out 2\r\n");
     printf("  d : dump SLG47011 Data Buffer2\r\n");
     printf("  g : load generated GreenPAK config to volatile RAM\r\n");
     printf("  G : load generated GreenPAK config to RAM and verify\r\n");
@@ -195,6 +218,23 @@ void TestUi_Print(const TestUiState_t *state)
                        pinStateText(state->relay[i].state));
             }
         }
+    }
+
+    printf("\r\nSLG47011 I2C Host Outputs, register 0x0061:\r\n");
+    if (state->hostOutputs.ok)
+    {
+        printf("  Raw byte             : 0x%02X\r\n", state->hostOutputs.raw);
+        printf("  Out 0 WDT kick       : %s, kicks %s\r\n",
+               state->hostOutputs.wdtKickLevel ? "HIGH" : "LOW",
+               boolText(state->hostOutputs.wdtKicksEnabled));
+        printf("  Out 1 relay power    : %s\r\n",
+               state->hostOutputs.relayPowerEnabled ? "HIGH" : "LOW");
+        printf("  Out 2 ADC shutdown   : %s\r\n",
+               state->hostOutputs.adcShutdown ? "HIGH" : "LOW");
+    }
+    else
+    {
+        printf("  I2C read failed, err=0x%08lX\r\n", SLG47011_GetLastError());
     }
 
     printf("\r\nSLG47011 Signal Readback:\r\n");

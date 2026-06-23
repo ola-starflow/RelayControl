@@ -23,6 +23,7 @@
 #define SLG47011_I2C_ADDR_7BIT           (SLG47011_I2C_CONTROL_CODE << 3)
 #define SLG47011_I2C_ADDR_HAL            (SLG47011_I2C_ADDR_7BIT << 1)
 
+#define SLG47011_REG_HOST_OUTPUTS        0x0061u
 #define SLG47011_REG_SIGNAL_READBACK     0x0062u
 #define SLG47011_REG_DATABUF2_RESULT     0x2236u
 
@@ -30,14 +31,25 @@
 #define SLG47011_TEMP_ADC_MAX            ((1u << SLG47011_TEMP_ADC_BITS) - 1u)
 #define SLG47011_ADC_VREF_MV             1620.0f
 #define SLG47011_TEMP_ADC_GAIN           1.0f
+#define SLG47011_WDT_KICK_INTERVAL_MS     1000u
 
 static I2C_HandleTypeDef *slgI2c = NULL;
 static uint32_t lastI2cError = 0;
+static uint8_t hostOutputCache = 0u;
+static bool hostOutputCacheValid = false;
+static bool wdtKicksEnabled = false;
+static bool wdtKickLevel = false;
+static uint32_t lastWdtKickTimeMs = 0u;
 
 void SLG47011_Init(I2C_HandleTypeDef *hi2c)
 {
     slgI2c = hi2c;
     lastI2cError = 0;
+    hostOutputCache = 0u;
+    hostOutputCacheValid = false;
+    wdtKicksEnabled = false;
+    wdtKickLevel = false;
+    lastWdtKickTimeMs = 0u;
 }
 
 uint32_t SLG47011_GetLastError(void)
@@ -126,6 +138,154 @@ static float tempMilliVoltToDegC(float tempSensorMv)
     return (753.8f - tempSensorMv) / 1.83f;
 }
 
+
+static bool outputBitIsHigh(uint8_t raw, uint8_t outputIndex)
+{
+    return ((raw & (uint8_t)(1u << outputIndex)) != 0u);
+}
+
+static HAL_StatusTypeDef readHostOutputRegister(uint8_t *value)
+{
+    HAL_StatusTypeDef st = readReg8(SLG47011_REG_HOST_OUTPUTS, value);
+
+    if (st == HAL_OK)
+    {
+        hostOutputCache = *value;
+        hostOutputCacheValid = true;
+        wdtKickLevel = outputBitIsHigh(hostOutputCache, SLG47011_HOST_OUTPUT_WDT_KICK);
+    }
+
+    return st;
+}
+
+HAL_StatusTypeDef SLG47011_ReadHostOutputs(SLG47011_HostOutputs_t *out)
+{
+    uint8_t value = 0u;
+    HAL_StatusTypeDef st = readHostOutputRegister(&value);
+
+    if (out != NULL)
+    {
+        out->ok = (st == HAL_OK);
+        out->raw = value;
+        out->wdtKickLevel = outputBitIsHigh(value, SLG47011_HOST_OUTPUT_WDT_KICK);
+        out->relayPowerEnabled = outputBitIsHigh(value, SLG47011_HOST_OUTPUT_RELAY_POWER);
+        out->adcShutdown = outputBitIsHigh(value, SLG47011_HOST_OUTPUT_ADC_SHUTDOWN);
+        out->wdtKicksEnabled = wdtKicksEnabled;
+    }
+
+    return st;
+}
+
+HAL_StatusTypeDef SLG47011_SetHostOutput(uint8_t outputIndex, bool high)
+{
+    if (outputIndex >= 8u)
+    {
+        return HAL_ERROR;
+    }
+
+    uint8_t value = hostOutputCache;
+
+    if (!hostOutputCacheValid)
+    {
+        HAL_StatusTypeDef st = readHostOutputRegister(&value);
+        if (st != HAL_OK)
+        {
+            return st;
+        }
+    }
+
+    uint8_t mask = (uint8_t)(1u << outputIndex);
+
+    if (high)
+    {
+        value |= mask;
+    }
+    else
+    {
+        value &= (uint8_t)~mask;
+    }
+
+    HAL_StatusTypeDef st = writeRegBytes(SLG47011_REG_HOST_OUTPUTS, &value, 1u);
+
+    if (st == HAL_OK)
+    {
+        hostOutputCache = value;
+        hostOutputCacheValid = true;
+
+        if (outputIndex == SLG47011_HOST_OUTPUT_WDT_KICK)
+        {
+            wdtKickLevel = high;
+        }
+    }
+
+    return st;
+}
+
+HAL_StatusTypeDef SLG47011_ToggleHostOutput(uint8_t outputIndex, bool *newState)
+{
+    if (outputIndex >= 8u)
+    {
+        return HAL_ERROR;
+    }
+
+    uint8_t value = hostOutputCache;
+
+    if (!hostOutputCacheValid)
+    {
+        HAL_StatusTypeDef st = readHostOutputRegister(&value);
+        if (st != HAL_OK)
+        {
+            return st;
+        }
+    }
+
+    bool high = !outputBitIsHigh(value, outputIndex);
+    HAL_StatusTypeDef st = SLG47011_SetHostOutput(outputIndex, high);
+
+    if ((st == HAL_OK) && (newState != NULL))
+    {
+        *newState = high;
+    }
+
+    return st;
+}
+
+HAL_StatusTypeDef SLG47011_SetWdtKicksEnabled(bool enabled)
+{
+    wdtKicksEnabled = enabled;
+
+    if (enabled)
+    {
+        lastWdtKickTimeMs = 0u;
+    }
+
+    return HAL_OK;
+}
+
+bool SLG47011_GetWdtKicksEnabled(void)
+{
+    return wdtKicksEnabled;
+}
+
+HAL_StatusTypeDef SLG47011_ServiceWdtKick(uint32_t nowMs)
+{
+    if (!wdtKicksEnabled)
+    {
+        return HAL_OK;
+    }
+
+    if ((lastWdtKickTimeMs != 0u) &&
+        ((uint32_t)(nowMs - lastWdtKickTimeMs) < SLG47011_WDT_KICK_INTERVAL_MS))
+    {
+        return HAL_OK;
+    }
+
+    lastWdtKickTimeMs = nowMs;
+    wdtKickLevel = !wdtKickLevel;
+
+    return SLG47011_SetHostOutput(SLG47011_HOST_OUTPUT_WDT_KICK, wdtKickLevel);
+}
+
 HAL_StatusTypeDef SLG47011_ReadSignalReadback(SLG47011_SignalReadback_t *out)
 {
     uint8_t value = 0;
@@ -170,7 +330,7 @@ void SLG47011_PrintI2cScan(void)
 
     printf("\r\nI2C scan:\r\n");
 
-    for (uint8_t addr = 1; addr < 0x7F; addr++)
+    for (uint8_t addr = 0; addr < 0x7F; addr++)
     {
         HAL_StatusTypeDef st = HAL_I2C_IsDeviceReady(slgI2c, addr << 1, 2, 20);
 
@@ -287,6 +447,15 @@ HAL_StatusTypeDef SLG47011_WriteRamConfig(const uint8_t *config, size_t len)
     }
 
     st = writeConfigRange(config, len, SLG47011_HOSTIF_CFG_START_ADDR, SLG47011_HOSTIF_CFG_END_ADDR);
+
+    if (st == HAL_OK)
+    {
+        /* The RAM image may have changed 0x0061, so force the next host-output
+         * operation to read the actual device state before modifying bits.
+         */
+        hostOutputCacheValid = false;
+    }
+
     return st;
 }
 

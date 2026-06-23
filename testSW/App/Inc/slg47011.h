@@ -21,6 +21,20 @@ typedef struct
     float degC;
 } SLG47011_Temperature_t;
 
+#define SLG47011_HOST_OUTPUT_WDT_KICK        0u
+#define SLG47011_HOST_OUTPUT_RELAY_POWER     1u
+#define SLG47011_HOST_OUTPUT_ADC_SHUTDOWN    2u
+
+typedef struct
+{
+    bool ok;
+    uint8_t raw;
+    bool wdtKickLevel;
+    bool relayPowerEnabled;
+    bool adcShutdown;
+    bool wdtKicksEnabled;
+} SLG47011_HostOutputs_t;
+
 typedef struct
 {
     bool ok;
@@ -42,6 +56,13 @@ typedef struct
 void SLG47011_Init(I2C_HandleTypeDef *hi2c);
 HAL_StatusTypeDef SLG47011_ReadSignalReadback(SLG47011_SignalReadback_t *out);
 HAL_StatusTypeDef SLG47011_ReadTemperature(SLG47011_Temperature_t *out);
+
+HAL_StatusTypeDef SLG47011_ReadHostOutputs(SLG47011_HostOutputs_t *out);
+HAL_StatusTypeDef SLG47011_SetHostOutput(uint8_t outputIndex, bool high);
+HAL_StatusTypeDef SLG47011_ToggleHostOutput(uint8_t outputIndex, bool *newState);
+HAL_StatusTypeDef SLG47011_SetWdtKicksEnabled(bool enabled);
+bool SLG47011_GetWdtKicksEnabled(void);
+HAL_StatusTypeDef SLG47011_ServiceWdtKick(uint32_t nowMs);
 
 /*
  * Write a complete volatile RAM configuration image.

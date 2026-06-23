@@ -22,37 +22,17 @@ static void updateRelayUiState(void)
     RelayIo_GetStates(uiState.relay, RELAY_IO_COUNT);
 }
 
-static bool updateSlgUiState(void)
+static void updateSlgUiState(void)
 {
-    SLG47011_SignalReadback_t oldSignal = uiState.signalReadback;
-    SLG47011_Temperature_t oldTemp = uiState.temperature;
-
     SLG47011_ReadSignalReadback(&uiState.signalReadback);
     SLG47011_ReadTemperature(&uiState.temperature);
-
-    if (uiState.signalReadback.ok != oldSignal.ok)
-    {
-        return true;
-    }
-
-    if (uiState.signalReadback.raw != oldSignal.raw)
-    {
-        return true;
-    }
-
-    if (uiState.temperature.ok != oldTemp.ok)
-    {
-        return true;
-    }
-
-    
-
-    return false;
+    SLG47011_ReadHostOutputs(&uiState.hostOutputs);
 }
 
 static void printUi(void)
 {
     updateRelayUiState();
+    updateSlgUiState();
     TestUi_Print(&uiState);
     DebugConsole_FlushMs(TERMINAL_FLUSH_MS);
 }
@@ -94,14 +74,18 @@ void App_Run(void)
 
         uint32_t now = HAL_GetTick();
 
+        SLG47011_ServiceWdtKick(now);
+
         if ((now - lastSlgPollTime) >= SLG47011_POLL_INTERVAL_MS)
         {
             lastSlgPollTime = now;
 
-            if (updateSlgUiState())
-            {
-                redraw = true;
-            }
+            /*
+             * Keep SLG telemetry fresh internally, but do not redraw the
+             * serial terminal just because temperature/readback data changes.
+             * Commands and physical GPIO changes still trigger redraws.
+             */
+            updateSlgUiState();
         }
 
         if (redraw)

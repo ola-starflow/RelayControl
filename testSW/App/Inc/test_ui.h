@@ -12,6 +12,7 @@ typedef struct
     RelayIoState_t relay[RELAY_IO_COUNT];
     SLG47011_SignalReadback_t signalReadback;
     SLG47011_Temperature_t temperature;
+    SLG47011_HostOutputs_t hostOutputs;
 } TestUiState_t;
 
 void TestUi_Print(const TestUiState_t *state);
