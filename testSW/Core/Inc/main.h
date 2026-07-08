@@ -59,18 +59,22 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define REL_L_Pin GPIO_PIN_1
 #define REL_L_GPIO_Port GPIOB
-#define REL_I2C_ADD_Pin GPIO_PIN_10
-#define REL_I2C_ADD_GPIO_Port GPIOB
+#define PRE_CHARGE_EN_Pin GPIO_PIN_10
+#define PRE_CHARGE_EN_GPIO_Port GPIOB
 #define REL_EN_H_Pin GPIO_PIN_13
 #define REL_EN_H_GPIO_Port GPIOB
 #define REL_EN_L_Pin GPIO_PIN_14
 #define REL_EN_L_GPIO_Port GPIOB
 #define REL_H_Pin GPIO_PIN_15
 #define REL_H_GPIO_Port GPIOB
+#define REL_BOOST_PWR_Pin GPIO_PIN_7
+#define REL_BOOST_PWR_GPIO_Port GPIOC
 #define REL_SHUTDOWN_N_Pin GPIO_PIN_8
 #define REL_SHUTDOWN_N_GPIO_Port GPIOA
 #define REL_RESET_N_Pin GPIO_PIN_9
 #define REL_RESET_N_GPIO_Port GPIOA
+#define REL_PWR_EN_Pin GPIO_PIN_10
+#define REL_PWR_EN_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

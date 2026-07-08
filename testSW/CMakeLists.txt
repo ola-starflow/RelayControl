@@ -50,10 +50,10 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     App/Src/appMain.c
     App/Src/debug_console.c
-    App/Src/relay_io.c
-    App/Src/slg47011.c
-    App/Src/test_ui.c
-    App/Src/slg47011_config_data.c
+    App/Src/greenpak_fixture.c
+    App/Src/i2c_scan.c
+    App/Src/manual_control.c
+    App/Src/greenpak_host.c
     Libs/sSerial/src/sSerial.c
 )
 
