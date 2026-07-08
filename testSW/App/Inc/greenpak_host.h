@@ -24,6 +24,7 @@ HAL_StatusTypeDef GreenPakHost_ReadOutputs(GreenPakHost_OutputStatus_t *status);
 HAL_StatusTypeDef GreenPakHost_SetOutput(uint8_t outputIndex, bool high);
 HAL_StatusTypeDef GreenPakHost_ToggleOutput(uint8_t outputIndex, bool *newLevel);
 HAL_StatusTypeDef GreenPakHost_ToggleRelayPowerEnable(bool *newLevel);
+HAL_StatusTypeDef GreenPakHost_SetRelayPowerEnable(bool enable);
 HAL_StatusTypeDef GreenPakHost_SetWdtAutoToggle(bool enable);
 bool GreenPakHost_GetWdtAutoToggleEnabled(void);
 HAL_StatusTypeDef GreenPakHost_ServiceWdtAutoToggle(uint32_t nowMs);

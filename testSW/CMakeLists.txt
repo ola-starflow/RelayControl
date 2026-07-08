@@ -51,10 +51,15 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     App/Src/appMain.c
     App/Src/debug_console.c
     App/Src/greenpak_fixture.c
+    App/Src/greenpak_host.c
     App/Src/i2c_scan.c
     App/Src/manual_control.c
-    App/Src/greenpak_host.c
+    App/Src/greenpak_default.c
+    App/Src/test_context.c
+    App/Src/test_cases.c
+    App/Src/test_runner.c
     Libs/sSerial/src/sSerial.c
+
 )
 
 # Add include paths

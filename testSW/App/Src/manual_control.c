@@ -43,6 +43,32 @@ void ManualControl_Init(void)
     setShutdownDrivenLow(false);
 }
 
+void ManualControl_SetResetReleased(bool released)
+{
+    HAL_GPIO_WritePin(REL_RESET_N_GPIO_Port,
+                      REL_RESET_N_Pin,
+                      released ? GPIO_PIN_SET : GPIO_PIN_RESET);
+}
+
+void ManualControl_SetShutdownReleased(bool released)
+{
+    setShutdownDrivenLow(!released);
+}
+
+void ManualControl_SetRelayEnableH(bool high)
+{
+    HAL_GPIO_WritePin(REL_EN_H_GPIO_Port,
+                      REL_EN_H_Pin,
+                      high ? GPIO_PIN_SET : GPIO_PIN_RESET);
+}
+
+void ManualControl_SetRelayEnableL(bool high)
+{
+    HAL_GPIO_WritePin(REL_EN_L_GPIO_Port,
+                      REL_EN_L_Pin,
+                      high ? GPIO_PIN_SET : GPIO_PIN_RESET);
+}
+
 void ManualControl_ToggleReset(void)
 {
     GPIO_PinState next = (HAL_GPIO_ReadPin(REL_RESET_N_GPIO_Port, REL_RESET_N_Pin) == GPIO_PIN_SET) ?

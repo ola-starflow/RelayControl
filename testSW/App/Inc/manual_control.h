@@ -21,6 +21,10 @@ typedef struct
 } ManualControl_Status_t;
 
 void ManualControl_Init(void);
+void ManualControl_SetResetReleased(bool released);
+void ManualControl_SetShutdownReleased(bool released);
+void ManualControl_SetRelayEnableH(bool high);
+void ManualControl_SetRelayEnableL(bool high);
 void ManualControl_ToggleReset(void);
 void ManualControl_ToggleShutdown(void);
 void ManualControl_ToggleRelayEnableH(void);

@@ -207,6 +207,11 @@ HAL_StatusTypeDef GreenPakHost_ToggleRelayPowerEnable(bool *newLevel)
     return GreenPakHost_ToggleOutput(GREENPAK_HOST_OUTPUT_RELAY_PWR_INDEX, newLevel);
 }
 
+HAL_StatusTypeDef GreenPakHost_SetRelayPowerEnable(bool enable)
+{
+    return GreenPakHost_SetOutput(GREENPAK_HOST_OUTPUT_RELAY_PWR_INDEX, enable);
+}
+
 HAL_StatusTypeDef GreenPakHost_SetWdtAutoToggle(bool enable)
 {
     s_wdtAutoToggleEnabled = enable;

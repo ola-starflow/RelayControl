@@ -4,12 +4,14 @@
 #include "greenpak_host.h"
 #include "i2c_scan.h"
 #include "manual_control.h"
+#include "test_runner.h"
 #include "main.h"
 
 #include <stdio.h>
 #include <stdint.h>
 #include <stdbool.h>
 #include <string.h>
+#include <stdlib.h>
 
 extern I2C_HandleTypeDef hi2c1;
 extern DAC_HandleTypeDef hdac1;
@@ -27,6 +29,10 @@ typedef enum
 } AppMenu_t;
 
 static AppMenu_t s_currentMenu = APP_MENU_MAIN;
+
+#define TEST_NUMBER_BUFFER_SIZE 6u
+static char s_testNumberBuffer[TEST_NUMBER_BUFFER_SIZE];
+static uint32_t s_testNumberLength = 0u;
 
 static const char *levelText(GPIO_PinState state)
 {
@@ -143,7 +149,7 @@ static void printMainMenu(const char *message)
     printFullLine("t = test interface");
     printFullLine("p = refresh main menu");
     printFullLine("");
-    printFullLine("The test interface is only a placeholder for now.");
+    printFullLine("Test interface contains automated behavior tests.");
     printBoxRule();
     printFullLine((message != NULL) ? message : "Ready.");
     printBoxBottom();
@@ -152,21 +158,7 @@ static void printMainMenu(const char *message)
 
 static void printTestMenu(const char *message)
 {
-    clearScreen();
-
-    printBoxTop();
-    printFullLine("SLG47011 Relay Test Console - Test interface");
-    printBoxRule();
-    printFullLine("Test interface placeholder.");
-    printFullLine("We will add automated tests here next.");
-    printFullLine("");
-    printFullLine("m = manual interface");
-    printFullLine("b = back to main menu");
-    printFullLine("p = refresh");
-    printBoxRule();
-    printFullLine((message != NULL) ? message : "Ready.");
-    printBoxBottom();
-    printf("> ");
+    TestRunner_PrintMenu(message);
 }
 
 static void printManualPanel(const char *message)
@@ -285,9 +277,13 @@ static void printHelp(void)
         case APP_MENU_TEST:
         default:
             printf("Test interface commands:\r\n");
+            printf("  a : run all tests\r\n");
+            printf("  <number> + Enter : run selected test, for example 1 or 10\r\n");
+            printf("  l : list tests\r\n");
+            printf("  d : apply default state\r\n");
+            printf("  p : refresh test interface\r\n");
             printf("  m : open manual interface\r\n");
             printf("  b : back to main menu\r\n");
-            printf("  p : refresh test interface\r\n");
             printf("  ? : print this help\r\n");
             break;
     }
@@ -463,10 +459,96 @@ static void handleManualMenuCommand(uint8_t rxData)
     }
 }
 
+static void clearTestNumberBuffer(void)
+{
+    s_testNumberLength = 0u;
+    s_testNumberBuffer[0] = '\0';
+}
+
+static void appendTestNumberDigit(uint8_t rxData)
+{
+    if (s_testNumberLength < (TEST_NUMBER_BUFFER_SIZE - 1u))
+    {
+        s_testNumberBuffer[s_testNumberLength++] = (char)rxData;
+        s_testNumberBuffer[s_testNumberLength] = '\0';
+        printf("%c", rxData);
+    }
+    else
+    {
+        clearTestNumberBuffer();
+        printTestMenu("Test number too long. Enter 1..9999.");
+    }
+}
+
+static void runBufferedTestNumber(void)
+{
+    if (s_testNumberLength == 0u)
+    {
+        printTestMenu("Enter a test number, then press Enter.");
+        return;
+    }
+
+    uint32_t id = (uint32_t)strtoul(s_testNumberBuffer, NULL, 10);
+    clearTestNumberBuffer();
+
+    if ((id == 0u) || (id > 65535u))
+    {
+        printTestMenu("Invalid test number.");
+        return;
+    }
+
+    TestRunner_RunById((uint16_t)id);
+}
+
+static bool isDigitChar(uint8_t rxData)
+{
+    return ((rxData >= (uint8_t)'0') && (rxData <= (uint8_t)'9'));
+}
+
 static void handleTestMenuCommand(uint8_t rxData)
 {
+    if (isDigitChar(rxData))
+    {
+        appendTestNumberDigit(rxData);
+        return;
+    }
+
+    if ((rxData == (uint8_t)'\r') || (rxData == (uint8_t)'\n'))
+    {
+        runBufferedTestNumber();
+        return;
+    }
+
+    if ((rxData == 0x08u) || (rxData == 0x7Fu))
+    {
+        if (s_testNumberLength > 0u)
+        {
+            s_testNumberLength--;
+            s_testNumberBuffer[s_testNumberLength] = '\0';
+            printf("\b \b");
+        }
+        return;
+    }
+
+    clearTestNumberBuffer();
+
     switch (rxData)
     {
+        case 'a':
+        case 'A':
+            TestRunner_RunAll();
+            break;
+
+        case 'l':
+        case 'L':
+            TestRunner_PrintList();
+            break;
+
+        case 'd':
+        case 'D':
+            TestRunner_ApplyDefaultCommand();
+            break;
+
         case 'm':
         case 'M':
             s_currentMenu = APP_MENU_MANUAL;

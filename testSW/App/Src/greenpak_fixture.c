@@ -89,6 +89,25 @@ void GreenPakFixture_ReleaseGreenPakOutputsToInputs(void)
     configureGpioInput(REL_L_GPIO_Port, REL_L_Pin);
 }
 
+
+GreenPakFixture_Status_t GreenPakFixture_SetRelayPwrVoltageZero(void)
+{
+    GreenPakFixture_Status_t status = startDacIfNeeded(s_hdacRelayPwrVoltage,
+                                                       &s_dacRelayPwrVoltageStarted,
+                                                       GREENPAK_FIXTURE_DAC1_START_FAILED);
+    if (status != GREENPAK_FIXTURE_OK)
+    {
+        return status;
+    }
+
+    if (HAL_DAC_SetValue(s_hdacRelayPwrVoltage, DAC_CHANNEL_1, DAC_ALIGN_12B_R, DAC_ZERO_CODE) != HAL_OK)
+    {
+        return GREENPAK_FIXTURE_DAC1_SET_FAILED;
+    }
+
+    return GREENPAK_FIXTURE_OK;
+}
+
 GreenPakFixture_Status_t GreenPakFixture_PrepareI2cScanAllAddressPinsLow(void)
 {
     GreenPakFixture_Status_t status;

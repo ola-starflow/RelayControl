@@ -41,6 +41,7 @@ void GreenPakFixture_Init(DAC_HandleTypeDef *hdacRelayPwrVoltage,
                           DAC_HandleTypeDef *hdacShuntPlus);
 
 GreenPakFixture_Status_t GreenPakFixture_PrepareI2cScanAllAddressPinsLow(void);
+GreenPakFixture_Status_t GreenPakFixture_SetRelayPwrVoltageZero(void);
 void GreenPakFixture_ReleaseGreenPakOutputsToInputs(void);
 void GreenPakFixture_PrintScanFixtureStatus(void);
 const char *GreenPakFixture_StatusText(GreenPakFixture_Status_t status);
