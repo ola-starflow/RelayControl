@@ -1,6 +1,7 @@
 #include "debug_console.h"
 #include "main.h"
 #include "sSerial.h"
+#include "greenpak_host.h"
 
 #include <stddef.h>
 #include <stdint.h>
@@ -45,6 +46,7 @@ void DebugConsole_FlushMs(uint32_t ms)
     {
         HAL_Delay(1);
         DebugConsole_Update();
+         (void)GreenPakHost_ServiceWdtAutoToggle(HAL_GetTick());
     }
 }
 

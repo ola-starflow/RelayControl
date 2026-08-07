@@ -40,6 +40,7 @@ void ManualControl_Init(void)
     HAL_GPIO_WritePin(REL_RESET_N_GPIO_Port, REL_RESET_N_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(REL_EN_H_GPIO_Port, REL_EN_H_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(REL_EN_L_GPIO_Port, REL_EN_L_Pin, GPIO_PIN_RESET);
+    GreenPakFixture_SetCurrentDirectionLow();
     setShutdownDrivenLow(false);
 }
 
@@ -95,6 +96,23 @@ void ManualControl_ToggleRelayEnableL(void)
     HAL_GPIO_WritePin(REL_EN_L_GPIO_Port, REL_EN_L_Pin, next);
 }
 
+void ManualControl_SetCurrentDirection(bool high)
+{
+    if (high)
+    {
+        GreenPakFixture_SetCurrentDirectionHigh();
+    }
+    else
+    {
+        GreenPakFixture_SetCurrentDirectionLow();
+    }
+}
+
+void ManualControl_ToggleCurrentDirection(void)
+{
+    ManualControl_SetCurrentDirection(!GreenPakFixture_GetCurrentDirectionHigh());
+}
+
 void ManualControl_GetStatus(ManualControl_Status_t *status)
 {
     if (status == NULL)
@@ -109,6 +127,7 @@ void ManualControl_GetStatus(ManualControl_Status_t *status)
                                           (status->shutdownNPin == GPIO_PIN_RESET);
     status->relEnH = HAL_GPIO_ReadPin(REL_EN_H_GPIO_Port, REL_EN_H_Pin);
     status->relEnL = HAL_GPIO_ReadPin(REL_EN_L_GPIO_Port, REL_EN_L_Pin);
+    status->currentDirection = GreenPakFixture_GetCurrentDirectionHigh() ? GPIO_PIN_SET : GPIO_PIN_RESET;
 
     status->preChargeEn = HAL_GPIO_ReadPin(PRE_CHARGE_EN_GPIO_Port, PRE_CHARGE_EN_Pin);
     status->relayL = HAL_GPIO_ReadPin(REL_L_GPIO_Port, REL_L_Pin);
@@ -135,6 +154,7 @@ void ManualControl_PrintStatus(void)
     }
     printf("    REL_EN_H     PB13 -> TP9  : %s\r\n", pinStateText(status.relEnH));
     printf("    REL_EN_L     PB14 -> TP15 : %s\r\n", pinStateText(status.relEnL));
+    printf("    CURR_DIR     PA6  -> TP7  : %s\r\n", pinStateText(status.currentDirection));
 
     printf("  GreenPAK -> Nucleo outputs/readbacks:\r\n");
     printf("    PreChargeEN  PB10 <- TP5  : %s\r\n", pinStateText(status.preChargeEn));

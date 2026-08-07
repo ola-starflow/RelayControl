@@ -12,6 +12,7 @@ typedef struct
     bool shutdownPulledLowExternally;
     GPIO_PinState relEnH;
     GPIO_PinState relEnL;
+    GPIO_PinState currentDirection;
 
     GPIO_PinState preChargeEn;
     GPIO_PinState relayL;
@@ -29,6 +30,8 @@ void ManualControl_ToggleReset(void);
 void ManualControl_ToggleShutdown(void);
 void ManualControl_ToggleRelayEnableH(void);
 void ManualControl_ToggleRelayEnableL(void);
+void ManualControl_SetCurrentDirection(bool high);
+void ManualControl_ToggleCurrentDirection(void);
 void ManualControl_GetStatus(ManualControl_Status_t *status);
 void ManualControl_PrintStatus(void);
 

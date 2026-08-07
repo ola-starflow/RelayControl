@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define CURRENT_DIRECTION_Pin GPIO_PIN_6
+#define CURRENT_DIRECTION_GPIO_Port GPIOA
 #define REL_L_Pin GPIO_PIN_1
 #define REL_L_GPIO_Port GPIOB
 #define PRE_CHARGE_EN_Pin GPIO_PIN_10
