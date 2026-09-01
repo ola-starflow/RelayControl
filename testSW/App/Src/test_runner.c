@@ -1,5 +1,6 @@
 #include "test_runner.h"
 #include "greenpak_default.h"
+#include "greenpak_host.h"
 #include "test_cases.h"
 
 #include <stdio.h>
@@ -32,7 +33,12 @@ void TestRunner_PrintMenu(const char *message)
 {
     clearScreen();
     printRule("┌", "─", "┐");
-    printLine("SLG47011 Relay Test Console - Test interface       I2C: 0x08");
+    char header[96];
+    (void)snprintf(header,
+                   sizeof(header),
+                   "SLG47011 Test interface  >>> SELECTED I2C: 0x%02X <<<",
+                   (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+    printLine(header);
     printRule("├", "─", "┤");
     printLine("Tests:");
     uint32_t count = 0u;
@@ -49,6 +55,7 @@ void TestRunner_PrintMenu(const char *message)
     printLine("  number + Enter  run selected test");
     printLine("  l      list tests");
     printLine("  d      apply default state");
+    printLine("  n      switch selected I2C device 0x08 / 0x18");
     printLine("  p      refresh");
     printLine("  m      manual interface");
     printLine("  b      back to main menu");

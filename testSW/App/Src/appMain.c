@@ -252,15 +252,22 @@ static void printFullLine(const char *text)
 
 static void printMainMenu(const char *message)
 {
+    char line[96];
+
     clearScreen();
 
     printBoxTop();
-    printFullLine("SLG47011 Relay Test Console");
+    (void)snprintf(line,
+                   sizeof(line),
+                   "SLG47011 Relay Test Console  >>> SELECTED I2C: 0x%02X <<<",
+                   (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+    printFullLine(line);
     printBoxRule();
     printFullLine("Main menu");
     printFullLine("");
     printFullLine("m = manual interface");
     printFullLine("t = test interface");
+    printFullLine("n = switch selected I2C device 0x08 / 0x18");
     printFullLine("p = refresh main menu");
     printFullLine("");
     printFullLine("Test interface contains automated behavior tests.");
@@ -288,7 +295,11 @@ static void printManualPanel(const char *message)
     clearScreen();
 
     printBoxTop();
-    printFullLine("SLG47011 Relay Test Console                              I2C: 0x08");
+    (void)snprintf(line,
+                   sizeof(line),
+                   "SLG47011 Relay Test Console  >>> SELECTED I2C: 0x%02X <<<",
+                   (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+    printFullLine(line);
     printBoxRule();
     makeAlignedRow(line, sizeof(line), "MCU -> GreenPAK", "", "GreenPAK -> MCU", "");
     printFullLine(line);
@@ -326,11 +337,15 @@ static void printManualPanel(const char *message)
     printFullLine(line);
 
     printBoxRule();
-    printFullLine("I2C:");
+    (void)snprintf(line,
+                   sizeof(line),
+                   "I2C selected device 0x%02X command state:",
+                   (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+    printFullLine(line);
     makePair(pair,
              sizeof(pair),
-             "OUT0 WDT",
-             host.wdtAutoToggleEnabled ? "ENABLED" : "DISABLED");
+             "OUT0 WDT level",
+             host.wdtOutputLevel ? "HIGH" : "LOW");
     printFullLine(pair);
     makePair(pair, sizeof(pair), "OUT1 RelayPWR", onOffText(host.relayPwrOutputLevel));
     printFullLine(pair);
@@ -338,6 +353,20 @@ static void printManualPanel(const char *message)
              sizeof(pair),
              "OUT2 ADC",
              host.adcOutputLevel ? "ENABLED" : "DISABLED");
+    printFullLine(pair);
+    printFullLine("");
+    printFullLine("WDT background service:");
+    makePair(pair,
+             sizeof(pair),
+             "WDT 0x08",
+             GreenPakHost_GetWdtAutoToggleEnabledForDevice(GREENPAK_DEVICE_08) ?
+                 "ENABLED" : "DISABLED");
+    printFullLine(pair);
+    makePair(pair,
+             sizeof(pair),
+             "WDT 0x18",
+             GreenPakHost_GetWdtAutoToggleEnabledForDevice(GREENPAK_DEVICE_18) ?
+                 "ENABLED" : "DISABLED");
     printFullLine(pair);
 
     if (hostReadStatus == HAL_OK)
@@ -356,8 +385,9 @@ static void printManualPanel(const char *message)
     printBoxRule();
     printFullLine((message != NULL) ? message : "Ready.");
     printBoxRule();
-    printFullLine("i=scan  r=reset  s=shutdown  h=en_h  l=en_l");
-    printFullLine("c=curr dir  e=relay pwr  o=adc  a=read adc");
+    printFullLine("n=switch I2C  i=scan  r=reset  s=shutdown");
+    printFullLine("h=en_h  l=en_l  c=curr dir  e=relay pwr");
+    printFullLine("o=adc  a=read adc");
     printFullLine("x=readback  v=set relay V  g=load RAM  G=load+verify RAM");
     printFullLine("w=wdt  d=wdt diag  p=refresh  b=main  t=test");
     printBoxBottom();
@@ -376,12 +406,14 @@ static void printHelp(void)
             printf("Main menu commands:\r\n");
             printf("  m : open manual interface\r\n");
             printf("  t : open test interface\r\n");
+            printf("  n : switch selected GreenPAK between I2C 0x08 and 0x18\r\n");
             printf("  p : refresh main menu\r\n");
             printf("  ? : print this help\r\n");
             break;
 
         case APP_MENU_MANUAL:
             printf("Manual interface commands:\r\n");
+            printf("  n : switch selected GreenPAK between I2C 0x08 and 0x18\r\n");
             printf("  i : force all address pins/DACs low and scan all I2C addresses\r\n");
             printf("  r : toggle Reset_N\r\n");
             printf("  s : toggle Shutdown_N drive-low/released state\r\n");
@@ -395,14 +427,15 @@ static void printHelp(void)
             printf("  v : set Relay pwr voltage DAC, enter real relay voltage in volts\r\n");
             printf("  g : load generated GreenPAK RAM image from slg47011_config_data.c\r\n");
             printf("  G : load generated GreenPAK RAM image and verify readback\r\n");
-            printf("  w : enable/disable automatic I2C OUT0 WDT toggle every 400 ms\r\n");
+            printf("  w : enable/disable WDT for selected device (200 ms edges / 400 ms cycle)\r\n");
             printf("  d : print WDT diagnostics/timing statistics\r\n");
             printf("  p : refresh live panel, no state changes\r\n");
             printf("  b : back to main menu\r\n");
             printf("  t : open test interface\r\n");
             printf("  ? : print this help\r\n");
             printf("\r\nNotes:\r\n");
-            printf("  - WDT is I2C OUT0.\r\n");
+            printf("  - WDT is I2C OUT0 and remains enabled for a device after selecting the other device.\r\n");
+            printf("  - If both WDTs are enabled, 0x08 and 0x18 are serviced back-to-back on one schedule.\r\n");
             printf("  - Relay PWR EN command is I2C OUT1.\r\n");
             printf("  - ADC enable command is I2C OUT2.\r\n");
             printf("  - Relay PWR EN feedback is PA10 / TP16 in the live panel.\r\n");
@@ -415,6 +448,7 @@ static void printHelp(void)
             printf("  <number> + Enter : run selected test, for example 1 or 10\r\n");
             printf("  l : list tests\r\n");
             printf("  d : apply default state\r\n");
+            printf("  n : switch selected GreenPAK between I2C 0x08 and 0x18\r\n");
             printf("  p : refresh test interface\r\n");
             printf("  m : open manual interface\r\n");
             printf("  b : back to main menu\r\n");
@@ -525,6 +559,8 @@ static void readAnalogValuesCommand(void)
     printf("------------------------------------------------------------\r\n");
     printf(" ADC / Data Buffer readout\r\n");
     printf("------------------------------------------------------------\r\n");
+    printf("Selected I2C device              : 0x%02X\r\n",
+           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
     printf("ADC command state, OUT2          : %s\r\n",
            host.adcOutputLevel ? "ENABLED" : "DISABLED");
 
@@ -582,6 +618,8 @@ static void readSignalReadbackCommand(void)
     printf("------------------------------------------------------------\r\n");
     printf(" I2C signal readback\r\n");
     printf("------------------------------------------------------------\r\n");
+    printf("Device   : 0x%02X\r\n",
+           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
     printf("Register : 0x0062\r\n");
 
     if (st == HAL_OK)
@@ -722,6 +760,8 @@ static void loadGeneratedRamConfigCommand(bool verifyAfterWrite)
     printf("------------------------------------------------------------\r\n");
     printf(" GreenPAK volatile RAM load\r\n");
     printf("------------------------------------------------------------\r\n");
+    printf("Target I2C  : 0x%02X\r\n",
+           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
     printf("Source data : App/Inc/slg47011_config_data.h\r\n");
     printf("              App/Src/slg47011_config_data.c\r\n");
     printf("Operation   : write generated RAM image%s\r\n",
@@ -769,8 +809,16 @@ static void printWdtDiagnosticsCommand(void)
     printf("------------------------------------------------------------\r\n");
     printf(" WDT diagnostics\r\n");
     printf("------------------------------------------------------------\r\n");
-    printf("Auto-toggle        : %s\r\n", diag.autoToggleEnabled ? "ENABLED" : "DISABLED");
-    printf("OUT0 current level : %s\r\n", diag.outputLevel ? "HIGH" : "LOW");
+    printf("Selected I2C       : 0x%02X\r\n",
+           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+    printf("WDT 0x08           : %s\r\n",
+           GreenPakHost_GetWdtAutoToggleEnabledForDevice(GREENPAK_DEVICE_08) ?
+               "ENABLED" : "DISABLED");
+    printf("WDT 0x18           : %s\r\n",
+           GreenPakHost_GetWdtAutoToggleEnabledForDevice(GREENPAK_DEVICE_18) ?
+               "ENABLED" : "DISABLED");
+    printf("Selected auto-WDT  : %s\r\n", diag.autoToggleEnabled ? "ENABLED" : "DISABLED");
+    printf("Selected OUT0 level: %s\r\n", diag.outputLevel ? "HIGH" : "LOW");
     printf("Target edge period : %lu ms\r\n", (unsigned long)diag.targetToggleIntervalMs);
     printf("Last edge interval : %lu ms\r\n", (unsigned long)diag.lastToggleIntervalMs);
     printf("Max edge interval  : %lu ms\r\n", (unsigned long)diag.maxToggleIntervalMs);
@@ -791,11 +839,29 @@ static void printWdtDiagnosticsCommand(void)
 
 static void toggleWdtAutoToggleCommand(void)
 {
+    uint8_t address = GreenPakHost_GetSelectedAddress7Bit();
     bool enable = !GreenPakHost_GetWdtAutoToggleEnabled();
-    (void)GreenPakHost_SetWdtAutoToggle(enable);
+    HAL_StatusTypeDef st = GreenPakHost_SetWdtAutoToggle(enable);
+    char message[96];
 
-    printManualPanel(enable ? "I2C OUT0 WDT auto-toggle -> ENABLED, 400 ms" :
-                              "I2C OUT0 WDT auto-toggle -> DISABLED");
+    if (st == HAL_OK)
+    {
+        (void)snprintf(message,
+                       sizeof(message),
+                       "WDT 0x%02X -> %s",
+                       (unsigned int)address,
+                       enable ? "ENABLED (200 ms edges)" : "DISABLED");
+    }
+    else
+    {
+        (void)snprintf(message,
+                       sizeof(message),
+                       "WDT 0x%02X update FAILED, HAL error 0x%08lX",
+                       (unsigned int)address,
+                       (unsigned long)GreenPakHost_GetLastError());
+    }
+
+    printManualPanel(message);
 }
 
 void App_Init(void)
@@ -828,6 +894,19 @@ static void handleMainMenuCommand(uint8_t rxData)
             printTestMenu("Test interface");
             break;
 
+        case 'n':
+        case 'N':
+        {
+            char message[96];
+            GreenPakHost_SelectNextDevice();
+            (void)snprintf(message,
+                           sizeof(message),
+                           "Selected I2C -> 0x%02X (WDT states unchanged)",
+                           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+            printMainMenu(message);
+            break;
+        }
+
         case 'p':
         case 'P':
             printMainMenu("Refreshed main menu");
@@ -847,6 +926,19 @@ static void handleManualMenuCommand(uint8_t rxData)
 {
     switch (rxData)
     {
+        case 'n':
+        case 'N':
+        {
+            char message[96];
+            GreenPakHost_SelectNextDevice();
+            (void)snprintf(message,
+                           sizeof(message),
+                           "Selected I2C -> 0x%02X (WDT states unchanged)",
+                           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+            printManualPanel(message);
+            break;
+        }
+
         case 'i':
         case 'I':
             runI2cScanCommand();
@@ -1041,6 +1133,19 @@ static void handleTestMenuCommand(uint8_t rxData)
         case 'D':
             TestRunner_ApplyDefaultCommand();
             break;
+
+        case 'n':
+        case 'N':
+        {
+            char message[96];
+            GreenPakHost_SelectNextDevice();
+            (void)snprintf(message,
+                           sizeof(message),
+                           "Selected I2C -> 0x%02X (WDT states unchanged)",
+                           (unsigned int)GreenPakHost_GetSelectedAddress7Bit());
+            printTestMenu(message);
+            break;
+        }
 
         case 'm':
         case 'M':

@@ -5,12 +5,20 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define GREENPAK_I2C_ADDRESS_7BIT            0x08u
+#define GREENPAK_I2C_ADDRESS_08_7BIT         0x08u
+#define GREENPAK_I2C_ADDRESS_18_7BIT         0x18u
 #define GREENPAK_HOST_REG_OUTPUTS            0x0061u
-#define GREENPAK_HOST_REG_SIGNAL_READBACK     0x0062u
-#define GREENPAK_HOST_OUTPUT_WDT_INDEX        0u
-#define GREENPAK_HOST_OUTPUT_RELAY_PWR_INDEX  1u
-#define GREENPAK_HOST_OUTPUT_ADC_INDEX        2u
+#define GREENPAK_HOST_REG_SIGNAL_READBACK    0x0062u
+#define GREENPAK_HOST_OUTPUT_WDT_INDEX       0u
+#define GREENPAK_HOST_OUTPUT_RELAY_PWR_INDEX 1u
+#define GREENPAK_HOST_OUTPUT_ADC_INDEX       2u
+
+typedef enum
+{
+    GREENPAK_DEVICE_08 = 0,
+    GREENPAK_DEVICE_18,
+    GREENPAK_DEVICE_COUNT
+} GreenPakHost_Device_t;
 
 typedef struct
 {
@@ -47,6 +55,15 @@ typedef struct
 } GreenPakHost_AnalogValues_t;
 
 void GreenPakHost_Init(I2C_HandleTypeDef *hi2c);
+
+GreenPakHost_Device_t GreenPakHost_GetSelectedDevice(void);
+void GreenPakHost_SelectDevice(GreenPakHost_Device_t device);
+void GreenPakHost_SelectNextDevice(void);
+uint8_t GreenPakHost_GetAddress7BitForDevice(GreenPakHost_Device_t device);
+uint16_t GreenPakHost_GetAddressHalForDevice(GreenPakHost_Device_t device);
+uint8_t GreenPakHost_GetSelectedAddress7Bit(void);
+uint16_t GreenPakHost_GetSelectedAddressHal(void);
+
 HAL_StatusTypeDef GreenPakHost_ReadOutputs(GreenPakHost_OutputStatus_t *status);
 HAL_StatusTypeDef GreenPakHost_SetOutput(uint8_t outputIndex, bool high);
 HAL_StatusTypeDef GreenPakHost_ToggleOutput(uint8_t outputIndex, bool *newLevel);
@@ -56,6 +73,7 @@ HAL_StatusTypeDef GreenPakHost_ToggleAdcEnable(bool *newLevel);
 HAL_StatusTypeDef GreenPakHost_SetAdcEnable(bool enable);
 HAL_StatusTypeDef GreenPakHost_SetWdtAutoToggle(bool enable);
 bool GreenPakHost_GetWdtAutoToggleEnabled(void);
+bool GreenPakHost_GetWdtAutoToggleEnabledForDevice(GreenPakHost_Device_t device);
 HAL_StatusTypeDef GreenPakHost_ServiceWdtAutoToggle(uint32_t nowMs);
 void GreenPakHost_GetWdtDiagnostics(GreenPakHost_WdtDiagnostics_t *diag);
 void GreenPakHost_ResetWdtDiagnostics(void);
